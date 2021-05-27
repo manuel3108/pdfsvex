@@ -1,6 +1,6 @@
 {
   "name": "pdfsvex-examples",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -12,7 +12,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@pdfsvex/pdfsvex": "workspace:^1.0.2",
-    "@pdfsvex/table-of-contents": "workspace:^0.0.1"
+    "@pdfsvex/pdfsvex": "workspace:^1.0.3",
+    "@pdfsvex/table-of-contents": "workspace:^0.0.2"
   }
 }

@@ -22,7 +22,7 @@
     "dist"
   ],
   "description": "PDF generation in svelte made easy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "",
   "license": "ISC",
   "dependencies": {
