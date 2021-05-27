@@ -15,10 +15,12 @@ importers:
   packages/examples:
     specifiers:
       '@pdfsvex/pdfsvex': workspace:^1.0.2
+      '@pdfsvex/table-of-contents': workspace:^0.0.1
       '@sveltejs/kit': next
       svelte: ^3.34.0
     dependencies:
       '@pdfsvex/pdfsvex': link:../pdfsvex
+      '@pdfsvex/table-of-contents': link:../table-of-contents
     devDependencies:
       '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
       svelte: 3.38.2

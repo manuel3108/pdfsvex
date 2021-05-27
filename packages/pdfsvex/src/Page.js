@@ -8,6 +8,7 @@ export class Page {
     generate() {
         const page = document.createElement('div');
         page.classList.add('sheet');
+        page.setAttribute('data-page-number', this.index);
 
         this.layoutComponent = new this.options.layout({
             target: page,

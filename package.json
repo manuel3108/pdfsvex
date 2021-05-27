@@ -8,7 +8,7 @@
     "lint": "pnpm run --parallel --stream lint",
     "preinstall": "npx only-allow pnpm",
     "prettier": "pnpm run --parallel --stream prettier",
-    "publish": "pnpm publish --filter ./packages --access public",
+    "publish": "pnpm publish --filter \"@pdfsvex/*\" --access public",
     "version": "pnpx changeset version && pnpm install"
   },
   "keywords": [],

@@ -1,9 +1,19 @@
 <script>
-    import PdfDocument from '@pdfsvex/pdfsvex';
+    import { PdfDocument, DynamicComponent } from '@pdfsvex/pdfsvex';
+    import { TableOfContents, Chapter } from '@pdfsvex/table-of-contents';
     import Layout from '$lib/Layout.svelte';
 
     const options = {
         layout: Layout,
+        dynamicComponents: [
+            {
+                id: 'table-of-contents',
+                component: TableOfContents,
+                props: {
+                    title: 'Inhaltsverzeichnis',
+                },
+            },
+        ],
     };
 
 </script>
@@ -13,4 +23,12 @@
     <p>
         Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
     </p>
+
+    <DynamicComponent id="table-of-contents" />
+
+    <Chapter key="asd" name="hello">
+        some text content
+
+        <Chapter key="asd2" name="hello2">more content</Chapter>
+    </Chapter>
 </PdfDocument>

@@ -15,6 +15,8 @@ export class PagerNew {
 
         this.walk(appendToNode, content, true);
         content.innerHTML = '';
+
+        this.finalize();
     }
 
     createNodesRecursive(appendTo, node) {
@@ -179,5 +181,30 @@ export class PagerNew {
         }
 
         return node;
+    }
+
+    finalize() {
+        this.pages.forEach((page) => {
+            const dynamicComponentWrappers =
+                page.contentDom.querySelectorAll('.dynamic-component');
+            dynamicComponentWrappers.forEach((componentWrapper) => {
+                const componentId = componentWrapper.getAttribute('data-id');
+                const componentInfo =
+                    this.getComponentInfoFromOptions(componentId);
+
+                new componentInfo.component({
+                    target: componentWrapper,
+                    props: {
+                        ...componentInfo.props,
+                        pages: this.pages,
+                        allContent: this.generated,
+                    },
+                });
+            });
+        });
+    }
+
+    getComponentInfoFromOptions(componentId) {
+        return this.options.dynamicComponents.find((c) => c.id === componentId);
     }
 }

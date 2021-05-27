@@ -12,6 +12,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@pdfsvex/pdfsvex": "workspace:^1.0.2"
+    "@pdfsvex/pdfsvex": "workspace:^1.0.2",
+    "@pdfsvex/table-of-contents": "workspace:^0.0.1"
   }
 }
