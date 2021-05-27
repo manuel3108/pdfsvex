@@ -6,7 +6,7 @@
     export let allContent;
     export let chapters;
     export let depth = 1;
-    export let indentWidthInPx = 20;
+    export let indentWidthInPx = 15;
     export let startSizePt = 14;
     export let decrementSize = 1;
 
@@ -17,7 +17,6 @@
     $: chaptersToShow = chapters.filter((c) => c.includeInTableOfContents);
 
     function findPageNumber(chapterId) {
-        // console.log(allContent.querySelector('#' + chapterId));
         const pageNumber = document
             .getElementById(chapterId)
             .closest('.sheet')
@@ -32,12 +31,15 @@
 {/if}
 <div>
     {#each chaptersToShow as chapter}
-        <div class:depth-0={depth == 0}>
+        <div
+            class:depth-0={depth == 0}
+            style="padding-left: {indentWidthInPx * depth}px;"
+        >
             <a
                 href="#{chapter.key}"
                 class:bold={depth == 0}
                 class="page"
-                style="padding-left: {indentWidthInPx * depth}px;
+                style="
                     font-size: {startSizePt}pt"
             >
                 <span class="chapter-number">{chapter.number}</span>
