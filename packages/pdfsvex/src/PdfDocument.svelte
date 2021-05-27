@@ -20,6 +20,7 @@
             new PagerNew(content, generated, options);
         }, 1000);
     });
+
 </script>
 
 <div bind:this={content} class="content">
@@ -41,4 +42,5 @@
             margin: 0.2in auto;
         }
     }
+
 </style>
