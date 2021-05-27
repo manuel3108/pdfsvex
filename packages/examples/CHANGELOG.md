@@ -1,6 +1,14 @@
 # pdfsvex-examples
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [37eab8e]
+  - @pdfsvex/table-of-contents@0.0.3
+
 ## 0.0.2
+
 ### Patch Changes
 
 - acc5b61: add initial example
