@@ -1,0 +1,17 @@
+{
+  "name": "pdfsvex-examples",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "next",
+    "svelte": "^3.34.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@pdfsvex/pdfsvex": "workspace:^1.0.2"
+  }
+}

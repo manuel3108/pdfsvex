@@ -21,7 +21,7 @@
     "src",
     "dist"
   ],
-  "description": "*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*",
+  "description": "PDF generation in svelte made easy",
   "version": "1.0.2",
   "author": "",
   "license": "ISC",
