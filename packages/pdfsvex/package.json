@@ -22,7 +22,7 @@
     "dist"
   ],
   "description": "*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "",
   "license": "ISC",
   "dependencies": {
