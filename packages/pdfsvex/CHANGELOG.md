@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 1.0.5
+
+### Patch Changes
+
+- 99be8c5: fix a bug where a textnode with childnodes was not correctly appended to the dom
+
 ## 1.0.4
 
 ### Patch Changes
