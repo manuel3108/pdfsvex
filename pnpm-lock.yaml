@@ -33,6 +33,7 @@ importers:
       rollup-plugin-css-only: ^3.1.0
       rollup-plugin-svelte: ^6.0.0
       svelte: ^3.0.0
+      uid: ^2.0.0
     dependencies:
       paper-css: 0.4.1
     devDependencies:
@@ -41,6 +42,7 @@ importers:
       rollup-plugin-css-only: 3.1.0_rollup@2.50.2
       rollup-plugin-svelte: 6.1.1_rollup@2.50.2+svelte@3.38.2
       svelte: 3.38.2
+      uid: 2.0.0
 
   packages/table-of-contents:
     specifiers:
@@ -273,6 +275,11 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@lukeed/csprng/1.0.0:
+    resolution: {integrity: sha512-ruuGHsnabmObBdeMg3vKdGRmh06Oog3eFpf/Tk6X0kDSJDpJTDCj2dqdp1+0VjzIUgHlFF9GBm7uFqfYhhdX9g==}
+    engines: {node: '>=8'}
     dev: true
 
   /@manypkg/find-root/1.1.0:
@@ -2157,6 +2164,13 @@ packages:
   /type-fest/0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /uid/2.0.0:
+    resolution: {integrity: sha512-hFw+zKBA1szYdbZWj6FjTxZzJnKNf+wTDcsxlJaXS64MCy9LQEmJUVieGYHCKek/WRyFIcs0cEXtGIQmfvHe2A==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@lukeed/csprng': 1.0.0
     dev: true
 
   /universalify/0.1.2:

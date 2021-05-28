@@ -12,7 +12,8 @@
     "rollup": "^2.0.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-svelte": "^6.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "uid": "^2.0.0"
   },
   "keywords": [
     "svelte"

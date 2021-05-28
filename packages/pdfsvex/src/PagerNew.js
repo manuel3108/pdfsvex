@@ -1,4 +1,5 @@
 import { Page } from './Page';
+import { uid } from 'uid';
 
 export class PagerNew {
     constructor(content, generated, options) {
@@ -29,6 +30,13 @@ export class PagerNew {
     }
 
     walk(appendToNode, nodeToCopy, root = false) {
+        if (
+            nodeToCopy.nodeType !== nodeToCopy.TEXT_NODE &&
+            nodeToCopy.nodeType !== nodeToCopy.COMMENT_NODE
+        ) {
+            nodeToCopy.setAttribute('data-uid', uid());
+        }
+
         let node = undefined;
         if (root) {
             // if we are the root, just append to this node
@@ -85,12 +93,24 @@ export class PagerNew {
 
             if (nodeToCopy.nodeType === nodeToCopy.TEXT_NODE) {
                 const words = nodeToCopy.textContent.split(' ');
-                const parentNodeCurrentPage = this.createNode(
-                    nodeToCopy.parentElement
+
+                // check if the parent already exists on this page
+                let parentNodeCurrentPage = this.getNodeIfExists(
+                    nodeToCopy.parentElement.getAttribute('data-uid')
                 );
+
+                if (!parentNodeCurrentPage) {
+                    // if not create it
+                    parentNodeCurrentPage = this.createNode(
+                        nodeToCopy.parentElement
+                    );
+
+                    // and append it to the page
+                    appendToNode.appendChild(parentNodeCurrentPage);
+                }
+
                 const textNodeCurrentPage = this.createNode(nodeToCopy);
                 parentNodeCurrentPage.appendChild(textNodeCurrentPage);
-                appendToNode.appendChild(parentNodeCurrentPage);
 
                 textNodeCurrentPage.textContent = '';
                 let lastSuccessfullWord = -1;
@@ -209,6 +229,12 @@ export class PagerNew {
                 });
             });
         });
+    }
+
+    getNodeIfExists(dataUid) {
+        return this.currentPage.contentDom.querySelector(
+            `[data-uid="${dataUid}"]`
+        );
     }
 
     getComponentInfoFromOptions(componentId) {
