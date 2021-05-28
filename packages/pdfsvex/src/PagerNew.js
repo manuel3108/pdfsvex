@@ -42,7 +42,10 @@ export class PagerNew {
 
         let avoidBreakInside = false;
         let pageBreakAfter = false;
-        if (nodeToCopy.nodeType !== nodeToCopy.TEXT_NODE) {
+        if (
+            nodeToCopy.nodeType !== nodeToCopy.TEXT_NODE &&
+            nodeToCopy.nodeType !== nodeToCopy.COMMENT_NODE
+        ) {
             const computedStyles = window.getComputedStyle(node);
             avoidBreakInside =
                 computedStyles.getPropertyValue('page-break-inside') ===
@@ -165,7 +168,11 @@ export class PagerNew {
     createNode(nodeToCopy) {
         let node = undefined;
         if (nodeToCopy.nodeType === nodeToCopy.TEXT_NODE) {
+            // text
             node = document.createTextNode(nodeToCopy.textContent);
+        } else if (nodeToCopy.nodeType === nodeToCopy.COMMENT_NODE) {
+            // comment
+            node = document.createComment(nodeToCopy.data);
         } else {
             node = document.createElement(nodeToCopy.tagName);
             // copy all attributes such as classnames or style informations
