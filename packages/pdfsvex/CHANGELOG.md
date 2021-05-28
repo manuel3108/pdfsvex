@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 1.0.4
+
+### Patch Changes
+
+- e2a1918: #5: comment nodes were causing undefined tags in html
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @pdfsvex/table-of-contents
 
+## 0.0.4
+
+### Patch Changes
+
+- cb63aa8: fix #4: make th main numbers bold
+
 ## 0.0.3
 
 ### Patch Changes
