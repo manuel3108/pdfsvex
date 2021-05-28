@@ -15,7 +15,7 @@ importers:
   packages/examples:
     specifiers:
       '@pdfsvex/pdfsvex': workspace:^1.0.3
-      '@pdfsvex/table-of-contents': workspace:^0.0.2
+      '@pdfsvex/table-of-contents': workspace:^0.0.3
       '@sveltejs/kit': next
       svelte: ^3.34.0
     dependencies:
