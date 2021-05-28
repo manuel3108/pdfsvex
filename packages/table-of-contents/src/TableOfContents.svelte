@@ -5,7 +5,7 @@
     export let pages;
     export let allContent;
     export let chapters;
-    export let depth = 1;
+    export let depth = 0;
     export let indentWidthInPx = 15;
     export let startSizePt = 14;
     export let decrementSize = 1;
@@ -39,8 +39,7 @@
                 href="#{chapter.key}"
                 class:bold={depth == 0}
                 class="page"
-                style="
-                    font-size: {startSizePt}pt"
+                style="font-size: {startSizePt}pt"
             >
                 <span class="chapter-number">{chapter.number}</span>
                 <span class="title">{chapter.name}</span>
