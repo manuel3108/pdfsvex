@@ -62,11 +62,14 @@ importers:
 
   packages/table-of-contents:
     specifiers:
+      '@pdfsvex/dynamic-page-number': workspace:^
       '@rollup/plugin-node-resolve': ^9.0.0
       rollup: ^2.0.0
       rollup-plugin-css-only: ^3.1.0
       rollup-plugin-svelte: ^6.0.0
       svelte: ^3.0.0
+    dependencies:
+      '@pdfsvex/dynamic-page-number': link:../dynamic-page-number
     devDependencies:
       '@rollup/plugin-node-resolve': 9.0.0_rollup@2.50.2
       rollup: 2.50.2

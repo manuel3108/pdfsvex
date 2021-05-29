@@ -1,32 +1,27 @@
 <script>
+    import { PageNumber } from '@pdfsvex/dynamic-page-number';
     import { chapters as chaptersFromStore } from './store';
 
-    export let title;
-    export let pages;
-    export let allContent;
+    export let title = 'Table of Contents';
     export let chapters;
     export let depth = 0;
     export let indentWidthInPx = 15;
     export let startSizePt = 14;
     export let decrementSize = 1;
 
-    if (!chapters) {
-        chapters = $chaptersFromStore;
-    }
+    let chaptersToShow;
 
-    $: chaptersToShow = chapters.filter((c) => c.includeInTableOfContents);
-
-    function findPageNumber(chapterId) {
-        const pageNumber = document
-            .getElementById(chapterId)
-            .closest('.sheet')
-            .getAttribute('data-page-number');
-        return pageNumber;
+    $: {
+        if (!chapters) {
+            chapters = $chaptersFromStore;
+            console.log(chapters);
+        }
+        chaptersToShow = chapters.filter((c) => c.includeInTableOfContents);
     }
 
 </script>
 
-{#if title}
+{#if title && depth == 0}
     <h1>{title}</h1>
 {/if}
 <div>
@@ -44,9 +39,9 @@
                 <span class="chapter-number">{chapter.number}</span>
                 <span class="title">{chapter.name}</span>
                 <span class="dots" />
-                <span class="page-number" data-id="#{chapter.key}"
-                    >{findPageNumber(chapter.key)}</span
-                >
+                <span class="page-number">
+                    <PageNumber pageById={chapter.key} />
+                </span>
             </a>
 
             {#if chapter.children.length > 0}
@@ -104,11 +99,6 @@
             '. . . . . . . . . . . . . . . . . . . . '
             '. . . . . . . . . . . . . . . . . . . . '
             '. . . . . . . . . . . . . . . . . . . . ';
-    }
-
-    .page-number::after {
-        float: right;
-        content: target-counter(attr(data-id), page);
     }
 
 </style>
