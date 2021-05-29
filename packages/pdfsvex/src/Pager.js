@@ -250,15 +250,17 @@ export class Pager {
                 );
                 const componentInfo =
                     this.getComponentInfoFromOptions(componentId);
-
-                new componentInfo.component({
-                    target: componentWrapper,
-                    props: {
-                        ...componentInfo.props,
-                        pages: this.pages,
-                        allContent: this.generated,
-                    },
-                });
+                if (componentInfo != undefined) {
+                    new componentInfo.component({
+                        target: componentWrapper,
+                        props: {
+                            ...componentInfo.props,
+                            pages: this.pages,
+                            allContent: this.generated,
+                            element: componentWrapper,
+                        },
+                    });
+                }
             });
         });
     }

@@ -13,6 +13,7 @@
   "type": "module",
   "dependencies": {
     "@pdfsvex/pdfsvex": "workspace:^",
-    "@pdfsvex/table-of-contents": "workspace:^"
+    "@pdfsvex/table-of-contents": "workspace:^",
+    "@pdfsvex/dynamic-page-number": "workspace:^"
   }
 }

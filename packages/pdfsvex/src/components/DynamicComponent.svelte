@@ -1,8 +1,14 @@
 <script>
-    import { CLASS_NAME_DYNAMIC_COMPONENT } from '../Constants';
+    import {
+        CLASS_NAME_DYNAMIC_COMPONENT,
+        ATTRIBUTE_NAME_DYNAMIC_COMPONENT_ID,
+    } from '../Constants';
 
-    export let id;
+    export let componentId;
+    export let attributes = {};
+
+    attributes[ATTRIBUTE_NAME_DYNAMIC_COMPONENT_ID] = componentId;
 
 </script>
 
-<div class={CLASS_NAME_DYNAMIC_COMPONENT} data-id={id} />
+<span class={CLASS_NAME_DYNAMIC_COMPONENT} {...attributes} />

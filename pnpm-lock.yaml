@@ -12,17 +12,33 @@ importers:
       eslint: 7.27.0
       prettier: 2.3.0
 
+  packages/dynamic-page-number:
+    specifiers:
+      '@rollup/plugin-node-resolve': ^9.0.0
+      rollup: ^2.0.0
+      rollup-plugin-css-only: ^3.1.0
+      rollup-plugin-svelte: ^6.0.0
+      svelte: ^3.0.0
+    devDependencies:
+      '@rollup/plugin-node-resolve': 9.0.0_rollup@2.50.2
+      rollup: 2.50.2
+      rollup-plugin-css-only: 3.1.0_rollup@2.50.2
+      rollup-plugin-svelte: 6.1.1_rollup@2.50.2+svelte@3.38.2
+      svelte: 3.38.2
+
   packages/examples:
     specifiers:
+      '@pdfsvex/dynamic-page-number': workspace:^
       '@pdfsvex/pdfsvex': workspace:^
       '@pdfsvex/table-of-contents': workspace:^
       '@sveltejs/kit': next
       svelte: ^3.34.0
     dependencies:
+      '@pdfsvex/dynamic-page-number': link:../dynamic-page-number
       '@pdfsvex/pdfsvex': link:../pdfsvex
       '@pdfsvex/table-of-contents': link:../table-of-contents
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.109_svelte@3.38.2
+      '@sveltejs/kit': 1.0.0-next.110_svelte@3.38.2
       svelte: 3.38.2
 
   packages/pdfsvex:
@@ -370,24 +386,24 @@ packages:
       rollup: 2.50.2
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.109_svelte@3.38.2:
-    resolution: {integrity: sha512-72iHsgcZTj9WU2VMq/qzMdFidTrSlJ1+KE0Iiw43Gee8TkKi5tMOyeu/f8lWa4HzdHLFZ2CJdvmcL7w3F4SWjg==}
+  /@sveltejs/kit/1.0.0-next.110_svelte@3.38.2:
+    resolution: {integrity: sha512-kXuLgu2TOWLC3Y7DYX0poMzxEuFz1Gy1Z/opkkNnajuJCEhvgXa5ujjr1eW6kU5vGU7rpX0tUN5u7BOuPe8s6g==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     hasBin: true
     peerDependencies:
       svelte: ^3.38.2
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.10_svelte@3.38.2+vite@2.3.4
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.10_svelte@3.38.2+vite@2.3.3
       cheap-watch: 1.0.3
       sade: 1.7.4
       svelte: 3.38.2
-      vite: 2.3.4
+      vite: 2.3.3
     transitivePeerDependencies:
       - rollup
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.10_svelte@3.38.2+vite@2.3.4:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.10_svelte@3.38.2+vite@2.3.3:
     resolution: {integrity: sha512-ImvxbhPePm2hWNTKBSA3LHAYGwiEjHjvvgfPLXm4R87sfZ+BMXql9jBmDpzUC/URBLT4BB3Jxos/i523qkJBHg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -403,7 +419,7 @@ packages:
       source-map: 0.7.3
       svelte: 3.38.2
       svelte-hmr: 0.14.4_svelte@3.38.2
-      vite: 2.3.4
+      vite: 2.3.3
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2195,8 +2211,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/2.3.4:
-    resolution: {integrity: sha512-7orxrF65+Q5n/sMCnO91S8OS0gkPJ7g+y3bLlc7CPCXVswK8to1T8YycCk9SZh+AcIc0TuN6YajWTBFS5atMNA==}
+  /vite/2.3.3:
+    resolution: {integrity: sha512-eO1iwRbn3/BfkNVMNJDeANAFCZ5NobYOFPu7IqfY7DcI7I9nFGjJIZid0EViTmLDGwwSUPmRAq3cRBbO3+DsMA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
