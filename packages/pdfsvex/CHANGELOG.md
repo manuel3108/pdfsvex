@@ -1,5 +1,12 @@
 # @pdfsvex/pdfsvex
 
+## 0.0.2
+
+### Patch Changes
+
+- aeb8771: Add package for dynamically getting the page number of an element based on an id
+- 3739ef5: Refactor and improve code
+
 ## 1.0.5
 
 ### Patch Changes
