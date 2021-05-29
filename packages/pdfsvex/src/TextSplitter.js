@@ -1,3 +1,4 @@
+import { ATTRIBUTE_NAME_DATA_CREATED_FROM_UID } from './Constants';
 import BaseNode from './nodes/BaseNode';
 import { Page } from './Page';
 
@@ -50,9 +51,11 @@ export default class TextSplitter {
         // the expected parent is higher in the dom then we are.
 
         // so get the uid of the original parent
-        const parentUid = nodeToCopy.parentElement.getAttribute('data-uid');
+        const parentUid = nodeToCopy.parentElement.getAttribute(
+            ATTRIBUTE_NAME_DATA_CREATED_FROM_UID
+        );
         // and search it in the current page
-        let parentNodeCurrentPage = currentPage.getNodeIfExists();
+        let parentNodeCurrentPage = currentPage.getNodeIfExists(parentUid);
 
         if (!parentNodeCurrentPage) {
             // if the node does not exist, create it

@@ -1,5 +1,5 @@
 <script>
-    import { PagerNew } from './PagerNew';
+    import { Pager } from '../Pager';
     import { onMount } from 'svelte';
     import 'paper-css/paper.css';
 
@@ -16,8 +16,9 @@
             document.body.classList.add('landscape');
         }
 
+        const pager = new Pager(content, generated, options);
         setTimeout(() => {
-            new PagerNew(content, generated, options);
+            pager.pageNow();
         }, 1000);
     });
 

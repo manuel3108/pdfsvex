@@ -31,26 +31,22 @@ export default class BaseNode {
     }
 
     /**
-     *
-     * @param {HTMLElement[]} wayToRoot
-     * @param {HTMLElement} appendToNode
-     * @param {HTMLElement} node
-     * @returns {HTMLElement} appendToNode
+     * checks if the node has the page-break-inside property set to avoid
+     * @param {HTMLElement} node node to check
+     * @returns {boolean} result of the check
      */
-    // static appendToNewPage(wayToRoot, appendToNode, node) {
-    //     wayToRoot.forEach((wtr) => {
-    //         const wayToRootNode = BaseNode.createFrom(wtr);
+    static hasPageBreakInsideAvoid(node) {
+        const computedStyles = window.getComputedStyle(node);
+        return computedStyles.getPropertyValue('page-break-inside') === 'avoid';
+    }
 
-    //         // add to new parent
-    //         appendToNode.appendChild(wayToRootNode);
-
-    //         // make the current parent
-    //         appendToNode = wayToRootNode;
-    //     });
-
-    //     // add the actual node
-    //     appendToNode.appendChild(node);
-
-    //     return appendToNode;
-    // }
+    /**
+     * checks if the node has the page-break-after property set to always
+     * @param {HTMLElement} node node to check
+     * @returns {boolean} result of the check
+     */
+    static hasPageBreakAfterAlways(node) {
+        const computedStyles = window.getComputedStyle(node);
+        return computedStyles.getPropertyValue('page-break-after') === 'always';
+    }
 }
