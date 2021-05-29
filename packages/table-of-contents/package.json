@@ -26,6 +26,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@pdfsvex/dynamic-page-number": "workspace:^"
+    "@pdfsvex/dynamic-page-number": "workspace:*"
   }
 }

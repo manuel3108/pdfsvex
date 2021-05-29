@@ -24,5 +24,8 @@
   "description": "Dynamic page number for pdfsvex",
   "version": "0.0.1",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@pdfsvex/pdfsvex": "workspace:*"
+  }
 }
