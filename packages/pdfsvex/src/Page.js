@@ -38,4 +38,8 @@ export class Page {
     save() {
         this.layoutComponent.$set({ content: this.domAnchor });
     }
+
+    getNodeIfExists(dataUid) {
+        return this.contentDom.querySelector(`[data-uid="${dataUid}"]`);
+    }
 }
