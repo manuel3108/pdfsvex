@@ -14,7 +14,6 @@
     $: {
         if (!chapters) {
             chapters = $chaptersFromStore;
-            console.log(chapters);
         }
         chaptersToShow = chapters.filter((c) => c.includeInTableOfContents);
     }

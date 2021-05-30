@@ -6,6 +6,7 @@
         PAGE_NUMBER_COMPONENT_ID,
     } from '@pdfsvex/dynamic-page-number';
     import Layout from '$lib/Layout.svelte';
+    import * as generator from 'decimal-to-roman-converter';
 
     const options = {
         layout: Layout,
@@ -13,7 +14,9 @@
             {
                 id: PAGE_NUMBER_COMPONENT_ID,
                 component: PageNumberResolver,
-                props: {},
+                props: {
+                    pageTransformer: (page) => generator(page),
+                },
             },
         ],
     };
@@ -30,270 +33,11 @@
         to read the documentation Visit
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
     </p>
 
     <Chapter key="asd" name="hello">
         some text content
 
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
-        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-        to read the documentation Visit
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>

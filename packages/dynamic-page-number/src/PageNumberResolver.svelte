@@ -8,11 +8,17 @@
     export let element;
     export let pages;
     export let allContent;
+    export let pageTransformer;
 
     const idToSearch = element.getAttribute(DATA_ATTRIBUTE_PAGE_BY_ID);
     const searchedElement = document.getElementById(idToSearch);
     const pageElement = searchedElement.closest(`.${CLASS_NAME_PAGE}`);
-    const pageNumber = pageElement.getAttribute(ATTRIBUTE_NAME_PAGE_NUMBER);
+    let pageNumber = pageElement.getAttribute(ATTRIBUTE_NAME_PAGE_NUMBER);
+    pageNumber = parseInt(pageNumber);
+
+    if (pageTransformer) {
+        pageNumber = pageTransformer(pageNumber);
+    }
 
 </script>
 
