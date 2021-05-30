@@ -1,5 +1,12 @@
 # @pdfsvex/dynamic-page-number
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [a85e992]
+  - @pdfsvex/pdfsvex@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes

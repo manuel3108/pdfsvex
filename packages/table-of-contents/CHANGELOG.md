@@ -1,5 +1,11 @@
 # @pdfsvex/table-of-contents
 
+## 0.0.5
+
+### Patch Changes
+
+- @pdfsvex/dynamic-page-number@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes

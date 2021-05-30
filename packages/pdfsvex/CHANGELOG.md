@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.0.4
+
+### Patch Changes
+
+- a85e992: fix bug for page breaks
+
 ## 0.0.3
 
 ### Patch Changes
