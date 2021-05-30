@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.0.3
+
+### Patch Changes
+
+- 6ae05e5: Move Dynamic component out of pager
+
 ## 0.0.2
 
 ### Patch Changes

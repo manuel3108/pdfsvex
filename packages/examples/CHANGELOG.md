@@ -1,6 +1,17 @@
 # pdfsvex-examples
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [6ae05e5]
+- Updated dependencies [04e9e33]
+  - @pdfsvex/pdfsvex@0.0.3
+  - @pdfsvex/dynamic-page-number@0.0.3
+  - @pdfsvex/table-of-contents@0.0.3
+
 ## 0.0.4
+
 ### Patch Changes
 
 - Updated dependencies [aeb8771]
