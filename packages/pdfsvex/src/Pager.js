@@ -73,8 +73,8 @@ export class Pager {
         let pageBreakAfter = false;
         // check if we need to pay attention on some css attributes
         if (!TextNode.is(nodeToCopy) && !CommentNode.is(nodeToCopy)) {
-            avoidBreakInside = BaseNode.hasPageBreakInsideAvoid(nodeToCopy);
-            pageBreakAfter = BaseNode.hasPageBreakInsideAvoid(nodeToCopy);
+            avoidBreakInside = BaseNode.hasPageBreakInsideAvoid(node);
+            pageBreakAfter = BaseNode.hasPageBreakAfterAlways(node);
         }
 
         // check if the page is currently overflowing

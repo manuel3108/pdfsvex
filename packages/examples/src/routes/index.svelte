@@ -7,6 +7,7 @@
     } from '@pdfsvex/dynamic-page-number';
     import Layout from '$lib/Layout.svelte';
     import * as generator from 'decimal-to-roman-converter';
+    import PageBreak from '$lib/PageBreak.svelte';
 
     const options = {
         layout: Layout,
@@ -34,6 +35,8 @@
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
     </p>
+
+    <PageBreak />
 
     <Chapter key="asd" name="hello">
         some text content
