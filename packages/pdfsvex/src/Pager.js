@@ -4,11 +4,8 @@ import TextNode from './nodes/TextNode';
 import CommentNode from './nodes/CommentNode';
 import BaseNode from './nodes/BaseNode';
 import TextSplitter from './TextSplitter';
-import {
-    ATTRIBUTE_NAME_DATA_CREATED_FROM_UID,
-    ATTRIBUTE_NAME_DYNAMIC_COMPONENT_ID,
-    CLASS_NAME_DYNAMIC_COMPONENT,
-} from './Constants';
+import { ATTRIBUTE_NAME_DATA_CREATED_FROM_UID } from './Constants';
+import DynamicComponents from './DynamicComponents';
 
 export class Pager {
     /**
@@ -240,32 +237,6 @@ export class Pager {
     }
 
     finalize() {
-        this.pages.forEach((page) => {
-            const dynamicComponentWrappers = page.contentDom.querySelectorAll(
-                '.' + CLASS_NAME_DYNAMIC_COMPONENT
-            );
-            dynamicComponentWrappers.forEach((componentWrapper) => {
-                const componentId = componentWrapper.getAttribute(
-                    ATTRIBUTE_NAME_DYNAMIC_COMPONENT_ID
-                );
-                const componentInfo =
-                    this.getComponentInfoFromOptions(componentId);
-                if (componentInfo != undefined) {
-                    new componentInfo.component({
-                        target: componentWrapper,
-                        props: {
-                            ...componentInfo.props,
-                            pages: this.pages,
-                            allContent: this.generated,
-                            element: componentWrapper,
-                        },
-                    });
-                }
-            });
-        });
-    }
-
-    getComponentInfoFromOptions(componentId) {
-        return this.options.dynamicComponents.find((c) => c.id === componentId);
+        DynamicComponents.create(this.options, this.pages, this.generated);
     }
 }
