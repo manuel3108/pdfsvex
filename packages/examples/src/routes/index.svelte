@@ -26,12 +26,12 @@
     };
 
     onMount(() => {
-        setTimeout(() => {
-            pdf.pageNow();
-        }, 1000);
+        pdf.pageNow();
     });
 
 </script>
+
+<body on: />
 
 <PdfDocument bind:this={pdf} {options}>
     <TableOfContents />
