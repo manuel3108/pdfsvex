@@ -35,7 +35,9 @@
                 class="page"
                 style="font-size: {startSizePt}pt"
             >
-                <span class="chapter-number">{chapter.number}</span>
+                {#if chapter.numbered}
+                    <span class="chapter-number">{chapter.number}</span>
+                {/if}
                 <span class="title">{chapter.name}</span>
                 <span class="dots" />
                 <span class="page-number">
@@ -68,8 +70,8 @@
         margin-bottom: 15px;
     }
 
-    .title {
-        padding-left: 10px;
+    .chapter-number {
+        padding-right: 10px;
     }
 
     .page {

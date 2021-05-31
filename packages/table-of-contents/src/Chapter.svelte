@@ -6,6 +6,7 @@
     export let includeInTableOfContents = true;
     export let key;
     export let depth = 1;
+    export let numbered = true;
 
     key = 'chapter-' + key;
 
@@ -15,6 +16,7 @@
         includeInTableOfContents,
         children: [],
         depth,
+        numbered,
     };
 
     if (getContext('parent') && includeInTableOfContents) {
@@ -38,15 +40,23 @@
             getParent: () => chapter,
         });
 
-        chapter.number = $chapters.length + 1;
+        if (numbered) {
+            chapter.number = getNumberedChapters($chapters).length + 1;
+        } else {
+            chapter.number = '';
+        }
 
         $chapters.push(chapter);
         $chapters = $chapters;
     }
 
+    function getNumberedChapters(chapters) {
+        return chapters.filter((c) => c.numbered);
+    }
+
 </script>
 
-{#if includeInTableOfContents}
+{#if includeInTableOfContents && !numbered}
     <h1
         id={key}
         class:smaller={chapter.depth == 2}

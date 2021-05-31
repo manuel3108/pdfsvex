@@ -91,7 +91,13 @@
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
 
         <Chapter key="asd2" name="hello2">more content</Chapter>
+        <Chapter key="asd2" name="hello2">more content</Chapter>
+        <Chapter key="asd2" name="hello2">more content</Chapter>
     </Chapter>
+    <Chapter numbered={false} key="asd23" name="hello2">more content</Chapter>
+    <Chapter numbered={false} key="asd24" name="hello2">more content</Chapter>
+    <Chapter key="asd2" name="hello2">more content</Chapter>
+    <Chapter key="asd2" name="hello2">more content</Chapter>
 
     <div style="page-break-inside: avoid;">
         <img
