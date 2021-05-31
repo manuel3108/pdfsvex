@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.0.6
+
+### Patch Changes
+
+- 76beab4: Allow the caller to decide when paging should happen
+
 ## 0.0.5
 
 ### Patch Changes
