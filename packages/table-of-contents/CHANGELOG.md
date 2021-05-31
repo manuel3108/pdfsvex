@@ -1,5 +1,11 @@
 # @pdfsvex/table-of-contents
 
+## 0.0.9
+
+### Patch Changes
+
+- 4773c72: Add posibility to have unnumbered items in the table of contents
+
 ## 0.0.8
 
 ### Patch Changes
