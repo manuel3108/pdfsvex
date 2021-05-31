@@ -8,7 +8,7 @@
     export let element;
     export let pages;
     export let allContent;
-    export let pageTransformer;
+    export let pageTransformer = undefined; // make it optional
 
     const idToSearch = element.getAttribute(DATA_ATTRIBUTE_PAGE_BY_ID);
     const searchedElement = document.getElementById(idToSearch);
