@@ -8,6 +8,9 @@
     import Layout from '$lib/Layout.svelte';
     import * as generator from 'decimal-to-roman-converter';
     import PageBreak from '$lib/PageBreak.svelte';
+    import { onMount } from 'svelte';
+
+    let pdf;
 
     const options = {
         layout: Layout,
@@ -22,9 +25,15 @@
         ],
     };
 
+    onMount(() => {
+        setTimeout(() => {
+            pdf.pageNow();
+        }, 1000);
+    });
+
 </script>
 
-<PdfDocument {options}>
+<PdfDocument bind:this={pdf} {options}>
     <TableOfContents />
 
     <h1>Welcome to SvelteKit</h1>
@@ -44,17 +53,56 @@
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        to read the documentation Visit
+        <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+
         <Chapter key="asd2" name="hello2">more content</Chapter>
     </Chapter>
 
-    <!-- <img
-        style="width: 100%"
-        src="http://manuel-serret.bplaced.de/Gleisbelegung/img/1.jpg"
-        alt=""
-    />
-    <img
-        style="width: 100%"
-        src="http://manuel-serret.bplaced.de/Gleisbelegung/img/1.jpg"
-        alt=""
-    /> -->
+    <div style="page-break-inside: avoid;">
+        <img
+            style="width: 100%"
+            src="http://manuel-serret.bplaced.de/Gleisbelegung/img/1.jpg"
+            alt=""
+        />
+        <img
+            style="width: 100%"
+            src="http://manuel-serret.bplaced.de/Gleisbelegung/img/1.jpg"
+            alt=""
+        />
+    </div>
 </PdfDocument>

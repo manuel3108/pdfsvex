@@ -9,6 +9,7 @@
 
     let content;
     let generated;
+    let pager;
 
     onMount(() => {
         document.body.classList.add(style);
@@ -16,11 +17,12 @@
             document.body.classList.add('landscape');
         }
 
-        const pager = new Pager(content, generated, options);
-        setTimeout(() => {
-            pager.pageNow();
-        }, 1000);
+        pager = new Pager(content, generated, options);
     });
+
+    export function pageNow() {
+        pager.pageNow();
+    }
 
 </script>
 
