@@ -1,5 +1,11 @@
 # @pdfsvex/dynamic-page-number
 
+## 0.0.6
+
+### Patch Changes
+
+- 9d4db0b: make page transformer parameter optional
+
 ## 0.0.5
 
 ### Patch Changes

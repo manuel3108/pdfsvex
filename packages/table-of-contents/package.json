@@ -22,7 +22,7 @@
     "dist"
   ],
   "description": "Table of contents for pdfsvex",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "",
   "license": "ISC",
   "dependencies": {
