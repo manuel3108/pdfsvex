@@ -13,7 +13,11 @@ export default class TextSplitter {
      */
     static splitToPages(nodeToCopy, node, currentPage, appendToNode) {
         // split the contents of the words at whitespace
-        const words = nodeToCopy.textContent.split(' ');
+        const words = nodeToCopy.textContent
+            .replaceAll('\n\t', ' ')
+            .replaceAll('\n', ' ')
+            .replaceAll('\t', ' ')
+            .split(' ');
 
         // get or create the parent
         const parentNodeCurrentPage = TextSplitter.determineParent(
