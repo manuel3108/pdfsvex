@@ -56,7 +56,7 @@
 
 </script>
 
-{#if includeInTableOfContents && !numbered}
+{#if includeInTableOfContents}
     <h1
         id={key}
         class:smaller={chapter.depth == 2}
