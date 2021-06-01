@@ -1,5 +1,18 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.0
+
+### Minor Changes
+
+- bb5d514: Add ability to identify elements where the text node was split across two pages
+
+### Patch Changes
+
+- 0a0b7b7: Fix bug where additional undefined nodes were added
+- 938ce74: fix bug where parent is not correctly detected
+- 06d7a26: Fix bug where page breaks were performed incorrectly because linebreaks in sourcecode
+- 85029ec: fix page break inside bug
+
 ## 0.0.6
 
 ### Patch Changes
