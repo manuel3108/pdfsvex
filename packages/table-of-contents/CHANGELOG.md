@@ -1,5 +1,11 @@
 # @pdfsvex/table-of-contents
 
+## 0.0.10
+
+### Patch Changes
+
+- c516d9e: Fix bug with missing numbers for chapters
+
 ## 0.0.9
 
 ### Patch Changes

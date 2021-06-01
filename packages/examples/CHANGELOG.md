@@ -1,5 +1,12 @@
 # pdfsvex-examples
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies [c516d9e]
+  - @pdfsvex/table-of-contents@0.0.10
+
 ## 0.0.10
 
 ### Patch Changes
