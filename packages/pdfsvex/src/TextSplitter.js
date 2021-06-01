@@ -1,4 +1,7 @@
-import { ATTRIBUTE_NAME_DATA_CREATED_FROM_UID } from './Constants';
+import {
+    ATTRIBUTE_NAME_DATA_CREATED_FROM_UID,
+    CLASS_NAME_CONTAINS_SPLITTET_TEXT_ACROSS_PAGES,
+} from './Constants';
 import TextNode from './nodes/TextNode';
 import BaseNode from './nodes/BaseNode';
 import { Page } from './Page';
@@ -33,6 +36,11 @@ export default class TextSplitter {
         parentNodeCurrentPage.appendChild(textNodeCurrentPage);
         // and make sure to clear its content
         textNodeCurrentPage.textContent = '';
+
+        // add a class to indicate that some text from this node was split to the next one
+        parentNodeCurrentPage.classList.add(
+            CLASS_NAME_CONTAINS_SPLITTET_TEXT_ACROSS_PAGES
+        );
 
         // now add as much words as possible to the current page
         const remainingWords = TextSplitter.addWordsUntilOverflow(
