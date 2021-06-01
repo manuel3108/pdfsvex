@@ -180,6 +180,10 @@ export class Pager {
         // remove the last element from `wayToRoot` as we have successfully processed it now
         if (!root) this.wayToRoot.pop();
 
+        if (avoidBreakInside) {
+            // if this is a node with avoid break inside, it is enough to return the current node
+            return appendToNode;
+        }
         // as we are now going one node up in the dom-tree, return the parent of the current node
         return appendToNode.parentElement;
     }
