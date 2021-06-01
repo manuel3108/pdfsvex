@@ -1,4 +1,5 @@
 import { ATTRIBUTE_NAME_DATA_CREATED_FROM_UID } from './Constants';
+import TextNode from './nodes/TextNode';
 import BaseNode from './nodes/BaseNode';
 import { Page } from './Page';
 
@@ -27,7 +28,7 @@ export default class TextSplitter {
         );
 
         // create the text node for the current page
-        const textNodeCurrentPage = BaseNode.createFrom(nodeToCopy);
+        const textNodeCurrentPage = TextNode.createFrom(nodeToCopy);
         // append it to its parent
         parentNodeCurrentPage.appendChild(textNodeCurrentPage);
         // and make sure to clear its content
