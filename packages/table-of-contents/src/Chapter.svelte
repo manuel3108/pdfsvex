@@ -62,7 +62,9 @@
         class:smaller={chapter.depth == 2}
         class:smallest={chapter.depth == 3}
     >
-        <span>{chapter.number}</span>
+        {#if numbered}
+            <span class="number">{chapter.number}</span>
+        {/if}
         <span class="title">{name}</span>
     </h1>
 {:else}
@@ -80,8 +82,8 @@
 </div>
 
 <style>
-    .title {
-        padding-left: 20px;
+    .number {
+        padding-right: 20px;
     }
 
     .smaller {
