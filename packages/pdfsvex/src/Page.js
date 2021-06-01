@@ -1,3 +1,5 @@
+import { ATTRIBUTE_NAME_DATA_CREATED_FROM_UID } from './Constants';
+
 export class Page {
     constructor(options, index) {
         this.options = options;
@@ -40,6 +42,8 @@ export class Page {
     }
 
     getNodeIfExists(dataUid) {
-        return this.contentDom.querySelector(`[data-uid="${dataUid}"]`);
+        return this.contentDom.querySelector(
+            `[${ATTRIBUTE_NAME_DATA_CREATED_FROM_UID}="${dataUid}"]`
+        );
     }
 }
