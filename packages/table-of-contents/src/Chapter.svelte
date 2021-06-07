@@ -46,8 +46,10 @@
             chapter.number = '';
         }
 
-        $chapters.push(chapter);
-        $chapters = $chapters;
+        if ($chapters.filter((c) => c.key === chapter.key).length === 0) {
+            $chapters.push(chapter);
+            $chapters = $chapters;
+        }
     }
 
     function getNumberedChapters(chapters) {
