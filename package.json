@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.16.0",
+    "@changesets/changelog-github": "^0.4.0",
     "eslint": "^7.5.0",
     "prettier": "^2.3.0"
   }
