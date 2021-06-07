@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.1
+
+### Patch Changes
+
+- [`ab1bd75`](https://github.com/manuel3108/pdfsvex/commit/ab1bd75ce46b4d55b814af69bcbef71812879924) Thanks [@manuel3108](https://github.com/manuel3108)! - Remove and restore ids of elements instead of deleting content to support hmr
+
 ## 0.1.0
 
 ### Minor Changes
