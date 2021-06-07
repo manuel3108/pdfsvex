@@ -4,7 +4,11 @@ import TextNode from './nodes/TextNode';
 import CommentNode from './nodes/CommentNode';
 import BaseNode from './nodes/BaseNode';
 import TextSplitter from './TextSplitter';
-import { ATTRIBUTE_NAME_DATA_CREATED_FROM_UID } from './Constants';
+import {
+    ATTRIBUTE_NAME_DATA_CREATED_FROM_UID,
+    ATTRIBUTE_NAME_ID,
+    ATTRIBUTE_NAME_SAVED_ID,
+} from './Constants';
 import DynamicComponents from './DynamicComponents';
 
 export class Pager {
@@ -17,15 +21,17 @@ export class Pager {
     constructor(content, generated, options) {
         this.generated = generated;
         this.options = options;
+        this.content = content;
+        // // deep clone the contents, so that we can reuse it later
+        // this.content = content.cloneNode(true);
 
-        // deep clone the contents, so that we can reuse it later
-        this.content = content.cloneNode(true);
-
-        // clear the content
-        content.innerHTML = '';
+        // // clear the content
+        // content.innerHTML = '';
     }
 
     pageNow() {
+        this.removeIds(this.content);
+
         this.wayToRoot = [];
         this.pages = [];
 
@@ -37,6 +43,22 @@ export class Pager {
         this.walk(appendToNode, this.content, true);
 
         this.finalize();
+    }
+
+    /**
+     * Removes all id attributes from all child elements to avoid having duplicated ids in document tree
+     * @param {HTMLElement} node root node, remove all ids from all child elements
+     */
+    removeIds(node) {
+        // get all elements with ids
+        const nodeList = node.querySelectorAll(`[${ATTRIBUTE_NAME_ID}]`);
+
+        // and replace the id attribute with a custom one
+        nodeList.forEach((n) => {
+            const idValue = n.getAttribute(ATTRIBUTE_NAME_ID);
+            n.removeAttribute(ATTRIBUTE_NAME_ID);
+            n.setAttribute(ATTRIBUTE_NAME_SAVED_ID, idValue);
+        });
     }
 
     /**

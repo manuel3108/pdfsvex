@@ -1,3 +1,5 @@
+import { ATTRIBUTE_NAME_ID, ATTRIBUTE_NAME_SAVED_ID } from '../Constants';
+
 export default class BaseNode {
     /**
      * Checks if a node is a node
@@ -26,8 +28,22 @@ export default class BaseNode {
                     attribute.nodeValue
                 );
             }
+
+            if (createdNode.hasAttribute(ATTRIBUTE_NAME_SAVED_ID)) {
+                BaseNode.restoreId(createdNode);
+            }
         }
         return createdNode;
+    }
+
+    /**
+     * Restores the id from a saved id in order to avoid duplicated ids in the document tree
+     * @param {HTMLElement} node to restore the id from
+     */
+    static restoreId(node) {
+        const idValue = node.getAttribute(ATTRIBUTE_NAME_SAVED_ID);
+        node.removeAttribute(ATTRIBUTE_NAME_SAVED_ID);
+        node.setAttribute(ATTRIBUTE_NAME_ID, idValue);
     }
 
     /**
