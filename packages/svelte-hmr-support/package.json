@@ -1,0 +1,8 @@
+{
+  "name": "@pdfsvex/svelte-hmr-support",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "author": "",
+  "license": "ISC"
+}

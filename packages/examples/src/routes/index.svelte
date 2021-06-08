@@ -1,5 +1,5 @@
 <script>
-    import { PdfDocument, DynamicComponent } from '@pdfsvex/pdfsvex';
+    import { PdfDocument } from '@pdfsvex/pdfsvex';
     import { TableOfContents, Chapter } from '@pdfsvex/table-of-contents';
     import {
         PageNumberResolver,
@@ -9,8 +9,10 @@
     import * as generator from 'decimal-to-roman-converter';
     import PageBreak from '$lib/PageBreak.svelte';
     import { onMount } from 'svelte';
+    import NestedComponent from '$lib/NestedComponent.svelte';
+    import { registerHotModuleReloader } from '@pdfsvex/svelte-hmr-support';
 
-    let pdf;
+    export let pdf;
 
     const options = {
         layout: Layout,
@@ -27,28 +29,29 @@
 
     onMount(() => {
         pdf.pageNow();
+        registerHotModuleReloader(pdf);
     });
 
 </script>
 
-<body on: />
-
 <PdfDocument bind:this={pdf} {options}>
     <TableOfContents />
 
-    <h1>Welcome to SvelteKit</h1>
+    <h1>aaass</h1>
     <p>
         Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the
-        documentation Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a>
+        Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
     </p>
 
+    <NestedComponent />
+
     <PageBreak />
 
-    <Chapter key="asd" name="hello">
-        some text content
+    <Chapter key="asd" name="hellao">
+        some text content as as
 
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
@@ -91,13 +94,13 @@
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
 
         <Chapter key="asd2" name="hello2">more content</Chapter>
-        <Chapter key="asd2" name="hello2">more content</Chapter>
-        <Chapter key="asd2" name="hello2">more content</Chapter>
+        <Chapter key="asd2" name="hello3">more content</Chapter>
+        <Chapter key="asd2" name="hello4">more content</Chapter>
     </Chapter>
-    <Chapter numbered={false} key="asd23" name="hello2">more content</Chapter>
-    <Chapter numbered={false} key="asd24" name="hello2">more content</Chapter>
-    <Chapter key="asd2" name="hello2">more content</Chapter>
-    <Chapter key="asd2" name="hello2">more content</Chapter>
+    <Chapter numbered={false} key="asd23" name="hello5">more content</Chapter>
+    <Chapter numbered={false} key="asd24" name="hello6">more content</Chapter>
+    <Chapter key="asd2" name="hello7">more content</Chapter>
+    <Chapter key="asd8" name="hello8">more content</Chapter>
 
     <div style="page-break-inside: avoid;">
         <img

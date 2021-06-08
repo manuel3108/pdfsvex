@@ -14,6 +14,7 @@
   "dependencies": {
     "@pdfsvex/dynamic-page-number": "workspace:*",
     "@pdfsvex/pdfsvex": "workspace:*",
+    "@pdfsvex/svelte-hmr-support": "workspace:*",
     "@pdfsvex/table-of-contents": "workspace:*",
     "decimal-to-roman-converter": "^1.0.0"
   }
