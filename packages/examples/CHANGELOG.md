@@ -1,5 +1,12 @@
 # pdfsvex-examples
 
+## 0.0.14
+
+### Patch Changes
+
+- Updated dependencies [[`ec95e62`](https://github.com/manuel3108/pdfsvex/commit/ec95e62bd16b9e6e80d48cf024311ea5087353ed)]:
+  - @pdfsvex/svelte-hmr-support@0.0.2
+
 ## 0.0.13
 
 ### Patch Changes
