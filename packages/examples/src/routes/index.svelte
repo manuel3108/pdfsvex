@@ -11,6 +11,7 @@
     import { onMount } from 'svelte';
     import NestedComponent from '$lib/NestedComponent.svelte';
     import { registerHotModuleReloader } from '@pdfsvex/svelte-hmr-support';
+    import { handleKeyboardNavigation } from '@pdfsvex/keyboard-navigation';
 
     export let pdf;
 
@@ -34,12 +35,14 @@
 
 </script>
 
+<svelte:window on:keydown={handleKeyboardNavigation} />
+
 <PdfDocument bind:this={pdf} {options}>
     <TableOfContents />
 
-    <h1>aaass</h1>
+    <h1>aaassass</h1>
     <p>
-        Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the
+        Vist <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the
         Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a>
         to read the documentation Visit
         <a href="https://kit.svelte.dev">kit.svelte.dev</a>
