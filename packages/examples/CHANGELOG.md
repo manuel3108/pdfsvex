@@ -1,5 +1,12 @@
 # pdfsvex-examples
 
+## 0.0.16
+
+### Patch Changes
+
+- Updated dependencies [[`a9b6cfb`](https://github.com/manuel3108/pdfsvex/commit/a9b6cfbcaea775c983a0b5eaebee9dfa83445514)]:
+  - @pdfsvex/keyboard-navigation@0.0.2
+
 ## 0.0.15
 
 ### Patch Changes
