@@ -1,7 +1,6 @@
 <script>
     import { Pager } from '../Pager';
     import { onMount } from 'svelte';
-    import 'paper-css/paper.css';
 
     export let options;
     export let style = 'A4';
