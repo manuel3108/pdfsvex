@@ -11,7 +11,7 @@
 
 > PDF generation in svelte made easy
 
-## 🏠 [Homepage / Demo](pdfsvex.serret.dev)
+## 🏠 [Homepage / Demo](https://pdfsvex.serret.dev)
 
 This is a monorepo for all of the pdfsvex packages:
 
