@@ -22,7 +22,7 @@
     "dist"
   ],
   "description": "Dynamic page number for pdfsvex",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "author": "",
   "license": "ISC",
   "dependencies": {
