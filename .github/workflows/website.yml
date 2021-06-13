@@ -1,0 +1,32 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    release:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@master
+              with:
+                  # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+                  fetch-depth: 0
+
+            - name: Setup Node.js 12.x
+              uses: actions/setup-node@master
+              with:
+                  node-version: 12.x
+
+            - run: npm install -g pnpm
+            - run: pnpm install
+            - run: pnpm build --filter ./packages/website
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./packages/website/build
+                  cname: pdfsvex.serret.dev

@@ -97,6 +97,14 @@ importers:
       rollup-plugin-svelte: 6.1.1_rollup@2.50.2+svelte@3.38.2
       svelte: 3.38.2
 
+  packages/website:
+    specifiers:
+      '@sveltejs/kit': next
+      svelte: ^3.34.0
+    devDependencies:
+      '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
+      svelte: 3.38.2
+
 packages:
 
   /@babel/code-frame/7.12.11:
