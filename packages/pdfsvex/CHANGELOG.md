@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.2
+
+### Patch Changes
+
+- [`11316dd`](https://github.com/manuel3108/pdfsvex/commit/11316ddbbf8c15d6d3043d7856e7a14ea02a2c8c) Thanks [@manuel3108](https://github.com/manuel3108)! - Remove paper-css dependency
+
 ## 0.1.1
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @pdfsvex/table-of-contents
 
+## 0.0.13
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @pdfsvex/dynamic-page-number@0.0.10
+
 ## 0.0.12
 
 ### Patch Changes
