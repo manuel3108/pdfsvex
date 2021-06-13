@@ -61,14 +61,11 @@ importers:
   packages/pdfsvex:
     specifiers:
       '@rollup/plugin-node-resolve': ^9.0.0
-      paper-css: ^0.4.1
       rollup: ^2.0.0
       rollup-plugin-css-only: ^3.1.0
       rollup-plugin-svelte: ^6.0.0
       svelte: ^3.0.0
       uid: ^2.0.0
-    dependencies:
-      paper-css: 0.4.1
     devDependencies:
       '@rollup/plugin-node-resolve': 9.0.0_rollup@2.50.2
       rollup: 2.50.2
@@ -99,9 +96,12 @@ importers:
 
   packages/website:
     specifiers:
+      '@pdfsvex/pdfsvex': workspace:^0.1.1
       '@sveltejs/adapter-static': ^1.0.0-next.13
       '@sveltejs/kit': next
       svelte: ^3.34.0
+    dependencies:
+      '@pdfsvex/pdfsvex': link:../pdfsvex
     devDependencies:
       '@sveltejs/adapter-static': 1.0.0-next.13
       '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
@@ -890,8 +890,8 @@ packages:
       is-arrayish: 0.2.1
     dev: true
 
-  /esbuild/0.12.6:
-    resolution: {integrity: sha512-RDvVLvAjsq/kIZJoneMiUOH7EE7t2QaW7T3Q7EdQij14+bZbDq5sndb0tTanmHIFSqZVMBMMyqzVHkS3dJobeA==}
+  /esbuild/0.12.8:
+    resolution: {integrity: sha512-sx/LwlP/SWTGsd9G4RlOPrXnIihAJ2xwBUmzoqe2nWwbXORMQWtAGNJNYLBJJqa3e9PWvVzxdrtyFZJcr7D87g==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -1676,10 +1676,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /paper-css/0.4.1:
-    resolution: {integrity: sha512-7gOjG4Hzy/ZGG/+tn8weFtSHWtQvSpkeJpFsH0nLqjXiH50zFyhajHggLEZd0hpCoYBhg5pRH5Lrg9p3EnDl2A==}
-    dev: false
-
   /parent-module/1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -1743,8 +1739,8 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /postcss/8.3.0:
-    resolution: {integrity: sha512-+ogXpdAjWGa+fdYY5BQ96V/6tAo+TdSSIMP5huJBIygdWwKtVoB5JWZ7yUd4xZ8r+8Kvvx4nyg/PQ071H4UtcQ==}
+  /postcss/8.3.2:
+    resolution: {integrity: sha512-y1FK/AWdZlBF5lusS5j5l4/vF67+vQZt1SXPVJ32y1kRGDQyrs1zk32hG1cInRTu14P0V+orPz+ifwW/7rR4bg==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.2.2
@@ -1932,8 +1928,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.50.4:
-    resolution: {integrity: sha512-mBQa9O6bdqur7a6R+TXcbdYgfO2arXlDG+rSrWfwAvsiumpJjD4OS23R9QuhItuz8ysWb8mZ91CFFDQUhJY+8Q==}
+  /rollup/2.51.2:
+    resolution: {integrity: sha512-ReV2eGEadA7hmXSzjxdDKs10neqH2QURf2RxJ6ayAlq93ugy6qIvXMmbc5cWMGCDh1h5T4thuWO1e2VNbMq8FA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -2277,10 +2273,10 @@ packages:
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      esbuild: 0.12.6
-      postcss: 8.3.0
+      esbuild: 0.12.8
+      postcss: 8.3.2
       resolve: 1.20.0
-      rollup: 2.50.4
+      rollup: 2.51.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
