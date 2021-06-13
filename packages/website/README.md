@@ -1,38 +1,30 @@
-# create-svelte
+<h1 align="center">Welcome to @pdfsvex/website 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/npm/v/@pdfsvex/website" />
+  <a href="pdfsvex.serret.dev" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+> PDF generation in svelte made easy
 
-## Creating a project
+## 🏠 [Homepage / Demo](pdfsvex.serret.dev)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## ❗ Important
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+This package does not work without the main [@pdfsvex/pdfsvex](../pdfsvex/README.md) package. Please refer to the documentation of [@pdfsvex/pdfsvex](../pdfsvex/README.md) for further details.
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+## 🤝 Contributing
 
-> Note: the `@next` is temporary
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/manuel3108/pdfsvex/issues).
 
-## Developing
+## Show your support
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Give a ⭐️ if this project helped you!
 
-```bash
-npm run dev
+---
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
