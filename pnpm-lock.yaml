@@ -14,6 +14,21 @@ importers:
       eslint: 7.27.0
       prettier: 2.3.0
 
+  packages/alternate-svelte-repl:
+    specifiers:
+      '@rollup/plugin-node-resolve': ^9.0.0
+      codemirror: ^5.61.1
+      rollup: ^2.0.0
+      rollup-plugin-svelte: ^6.0.0
+      svelte: ^3.0.0
+    dependencies:
+      codemirror: 5.61.1
+    devDependencies:
+      '@rollup/plugin-node-resolve': 9.0.0_rollup@2.51.2
+      rollup: 2.51.2
+      rollup-plugin-svelte: 6.1.1_rollup@2.51.2+svelte@3.38.2
+      svelte: 3.38.2
+
   packages/dynamic-page-number:
     specifiers:
       '@pdfsvex/pdfsvex': workspace:*
@@ -96,14 +111,16 @@ importers:
 
   packages/website:
     specifiers:
-      '@pdfsvex/dynamic-page-number': workspace:^0.0.10
-      '@pdfsvex/pdfsvex': workspace:^0.1.1
-      '@pdfsvex/table-of-contents': workspace:^0.0.13
+      '@pdfsvex/alternate-svelte-repl': workspace:*
+      '@pdfsvex/dynamic-page-number': workspace:*
+      '@pdfsvex/pdfsvex': workspace:*
+      '@pdfsvex/table-of-contents': workspace:*
       '@sveltejs/adapter-static': ^1.0.0-next.13
       '@sveltejs/kit': next
       codesandbox: ^2.2.3
       svelte: ^3.34.0
     dependencies:
+      '@pdfsvex/alternate-svelte-repl': link:../alternate-svelte-repl
       '@pdfsvex/dynamic-page-number': link:../dynamic-page-number
       '@pdfsvex/pdfsvex': link:../pdfsvex
       '@pdfsvex/table-of-contents': link:../table-of-contents
@@ -407,6 +424,21 @@ packages:
       rollup: 2.50.2
     dev: true
 
+  /@rollup/plugin-node-resolve/9.0.0_rollup@2.51.2:
+    resolution: {integrity: sha512-gPz+utFHLRrd41WMP13Jq5mqqzHL3OXrfj3/MkSyB6UBIcuNt9j60GCbarzMzdf1VHFpOxfQh/ez7wyadLMqkg==}
+    engines: {node: '>= 10.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@2.51.2
+      '@types/resolve': 1.17.1
+      builtin-modules: 3.2.0
+      deepmerge: 4.2.2
+      is-module: 1.0.0
+      resolve: 1.20.0
+      rollup: 2.51.2
+    dev: true
+
   /@rollup/pluginutils/3.1.0_rollup@2.50.2:
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
@@ -417,6 +449,18 @@ packages:
       estree-walker: 1.0.1
       picomatch: 2.3.0
       rollup: 2.50.2
+    dev: true
+
+  /@rollup/pluginutils/3.1.0_rollup@2.51.2:
+    resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      '@types/estree': 0.0.39
+      estree-walker: 1.0.1
+      picomatch: 2.3.0
+      rollup: 2.51.2
     dev: true
 
   /@rollup/pluginutils/4.1.0:
@@ -492,8 +536,8 @@ packages:
     resolution: {integrity: sha512-1x8W5OpxPq+T85OUsHRP6BqXeosKmeXRtjoF39STcdf/UWLqUsoehstZKOi0CunhVqHG17AyZgpj20eRVooK6A==}
     dev: true
 
-  /@types/node/15.6.1:
-    resolution: {integrity: sha512-7EIraBEyRHEe7CH+Fm1XvgqU6uwZN8Q7jppJGcqjROMT29qhAuuOxYB1uEY5UMYQKEmA5D+5tBnhdaPXSsLONA==}
+  /@types/node/15.12.2:
+    resolution: {integrity: sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==}
     dev: true
 
   /@types/normalize-package-data/2.4.0:
@@ -503,7 +547,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 15.6.1
+      '@types/node': 15.12.2
     dev: true
 
   /@types/semver/6.2.2:
@@ -866,6 +910,10 @@ packages:
     resolution: {integrity: sha1-2jCcwmPfFZlMaIypAheco8fNfH4=}
     engines: {node: '>=0.8'}
     dev: true
+
+  /codemirror/5.61.1:
+    resolution: {integrity: sha512-+D1NZjAucuzE93vJGbAaXzvoBHwp9nJZWWWF9utjv25+5AZUiah6CIlfb4ikG4MoDsFsCG8niiJH5++OO2LgIQ==}
+    dev: false
 
   /codesandbox-import-util-types/2.2.3:
     resolution: {integrity: sha512-Qj00p60oNExthP2oR3vvXmUGjukij+rxJGuiaKM6tyUmSyimdZsqHI/TUvFFClAffk9s7hxGnQgWQ8KCce27qQ==}
@@ -2687,8 +2735,8 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /postcss/8.3.2:
-    resolution: {integrity: sha512-y1FK/AWdZlBF5lusS5j5l4/vF67+vQZt1SXPVJ32y1kRGDQyrs1zk32hG1cInRTu14P0V+orPz+ifwW/7rR4bg==}
+  /postcss/8.3.4:
+    resolution: {integrity: sha512-/tZY0PXExXXnNhKv3TOvZAOUYRyuqcCbBm2c17YMDK0PlVII3K7/LKdt3ScHL+hhouddjUWi+1sKDf9xXW+8YA==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.2.2
@@ -2989,6 +3037,19 @@ packages:
     dependencies:
       require-relative: 0.8.7
       rollup: 2.50.2
+      rollup-pluginutils: 2.8.2
+      sourcemap-codec: 1.4.8
+      svelte: 3.38.2
+    dev: true
+
+  /rollup-plugin-svelte/6.1.1_rollup@2.51.2+svelte@3.38.2:
+    resolution: {integrity: sha512-ijnm0pH1ScrY4uxwaNXBpNVejVzpL2769hIEbAlnqNUWZrffLspu5/k9/l/Wsj3NrEHLQ6wCKGagVJonyfN7ow==}
+    peerDependencies:
+      rollup: '>=1.19.2'
+      svelte: '*'
+    dependencies:
+      require-relative: 0.8.7
+      rollup: 2.51.2
       rollup-pluginutils: 2.8.2
       sourcemap-codec: 1.4.8
       svelte: 3.38.2
@@ -3572,7 +3633,7 @@ packages:
     hasBin: true
     dependencies:
       esbuild: 0.12.8
-      postcss: 8.3.2
+      postcss: 8.3.4
       resolve: 1.20.0
       rollup: 2.51.2
     optionalDependencies:

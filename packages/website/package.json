@@ -14,8 +14,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@pdfsvex/dynamic-page-number": "workspace:^0.0.10",
-    "@pdfsvex/pdfsvex": "workspace:^0.1.1",
-    "@pdfsvex/table-of-contents": "workspace:^0.0.13"
+    "@pdfsvex/alternate-svelte-repl": "workspace:*",
+    "@pdfsvex/dynamic-page-number": "workspace:*",
+    "@pdfsvex/pdfsvex": "workspace:*",
+    "@pdfsvex/table-of-contents": "workspace:*"
   }
 }

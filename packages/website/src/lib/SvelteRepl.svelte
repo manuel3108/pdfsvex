@@ -1,33 +1,24 @@
 <script>
-    export let src;
-    export let title;
+    import { DynamicComponent } from '@pdfsvex/pdfsvex';
+    import {
+        SVELTE_REPL_COMPONENT_ID,
+        ATTRIBUTE_NAME_COMPONENTS,
+    } from './Constants';
 
-    import { getParameters } from 'codesandbox/lib/api/define';
+    export let components;
 
-    const parameters = getParameters({
-        files: {
-            'index.js': {
-                content: "console.log('hello')",
-            },
-            'package.json': {
-                content: { dependencies: {} },
-            },
-        },
-    });
-
-    const url = `https://codesandbox.io/api/v1/sandboxes/define?parameters=${parameters}`;
-
-    function createSandbox() {}
+    const attributes = {};
+    attributes[ATTRIBUTE_NAME_COMPONENTS] = JSON.stringify(components);
 
 </script>
 
-<!-- <button on:click={createSandbox}>create</button> -->
+<div>
+    <DynamicComponent componentId={SVELTE_REPL_COMPONENT_ID} {attributes} />
+</div>
 
-<form
-    action="https://codesandbox.io/api/v1/sandboxes/define"
-    method="POST"
-    target="_blank"
->
-    <input type="hidden" name="parameters" value={parameters} />
-    <input type="submit" value="Open in sandbox" />
-</form>
+<style>
+    div {
+        height: 600px;
+    }
+
+</style>
