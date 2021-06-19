@@ -5,10 +5,6 @@
     export let components = [];
     export let currentComponentIndex = -1;
 
-    onMount(() => {
-        currentComponentIndex = components.findIndex((c) => c.active);
-    });
-
     const dispatch = createEventDispatcher();
 
     function onClick(index) {

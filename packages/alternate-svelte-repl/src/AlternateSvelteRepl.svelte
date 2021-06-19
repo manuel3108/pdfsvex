@@ -12,19 +12,27 @@
             name: 'App',
             type: 'svelte',
             source: 'asd',
+            default: true,
         },
     ];
     export let view = 'full';
     export let height;
 
-    $: {
-        codeToDisplay = components[0].source;
-    }
-
     let preview;
     let worker;
     let codeToDisplay = '';
     let componentIndex = 0;
+    let firstComponentUpdate = true;
+
+    $: {
+        if (firstComponentUpdate) {
+            codeToDisplay = components[0].source;
+
+            if (!components[0].default) {
+                firstComponentUpdate = false;
+            }
+        }
+    }
 
     onMount(() => {
         $viewStore = view;
@@ -62,7 +70,7 @@
 </script>
 
 <div class="svelte-repl" style="height: {height};">
-    <div>
+    <div class="topbar">
         <TopBar
             {components}
             currentComponentIndex={componentIndex}
@@ -84,11 +92,15 @@
 </div>
 
 <style>
+    .topbar {
+        height: 25px;
+    }
+
     .editor-preview-container {
         display: flex;
         align-items: stretch;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 25px);
     }
 
     .editor-preview-container div {
