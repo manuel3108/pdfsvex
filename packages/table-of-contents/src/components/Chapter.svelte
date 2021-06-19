@@ -1,5 +1,5 @@
 <script>
-    import { chapters } from './store';
+    import { chapters } from '../store';
     import { getContext, setContext } from 'svelte';
 
     export let name;
@@ -19,7 +19,7 @@
         numbered,
     };
 
-    if (getContext('parent') && includeInTableOfContents) {
+    if (getContext('parent')) {
         // we are a child, add us to the parent
         const { getParent } = getContext('parent');
         const parent = getParent();
@@ -34,14 +34,19 @@
         });
 
         $chapters = $chapters;
-    } else if (includeInTableOfContents) {
+    } else {
         // we are the parent
         setContext('parent', {
             getParent: () => chapter,
         });
 
         if (numbered) {
-            chapter.number = getNumberedChapters($chapters).length + 1;
+            const present = $chapters.filter((c) => c.key === chapter.key)[0];
+            if (present) {
+                chapter.number = present.number;
+            } else {
+                chapter.number = getNumberedChapters($chapters).length + 1;
+            }
         } else {
             chapter.number = '';
         }
@@ -58,44 +63,10 @@
 
 </script>
 
-{#if includeInTableOfContents}
-    <h1
-        id={key}
-        class:smaller={chapter.depth == 2}
-        class:smallest={chapter.depth == 3}
-    >
-        {#if numbered}
-            <span class="number">{chapter.number}</span>
-        {/if}
-        <span class="title">{name}</span>
-    </h1>
-{:else}
-    <h1
-        id={key}
-        class:smaller={chapter.depth == 2}
-        class:smallest={chapter.depth == 3}
-    >
-        {name}
-    </h1>
-{/if}
+<slot name="title" {chapter}>
+    <span>You need to supply content or use the default implementation</span>
+</slot>
 
-<div class="chapter-content">
-    <slot>fallback</slot>
-</div>
-
-<style>
-    .number {
-        padding-right: 20px;
-    }
-
-    .smaller {
-        font-size: 26px;
-        font-weight: normal;
-    }
-
-    .smallest {
-        font-size: 22px;
-        font-weight: normal;
-    }
-
-</style>
+<slot name="content">
+    <span>You need to supply content</span>
+</slot>

@@ -1,5 +1,5 @@
 <script>
-    import { chapters } from './store';
+    import { chapters } from '../store';
 
     export let key;
 
@@ -29,15 +29,6 @@
 
 </script>
 
-{#if chapter}
-    <a href="#{chapter.key}">{chapter.name}</a>
-{:else}
-    <span>chapter "{key}" not found</span>
-{/if}
-
-<style>
-    span {
-        color: red;
-    }
-
-</style>
+<slot {chapter}>
+    <span>You need to supply content or use the default implementation</span>
+</slot>
