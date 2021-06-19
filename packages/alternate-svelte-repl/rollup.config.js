@@ -15,24 +15,6 @@ export default [
             { file: pkg.main, format: 'umd', name },
         ],
         plugins: [svelte(), resolve()],
-    },
-    {
-        input: 'src/worker.js',
-        output: {
-            sourcemap: true,
-            format: 'esm',
-            name: 'app',
-            file: 'dist/worker.js',
-        },
-        plugins: [
-            resolve({
-                browser: true,
-                dedupe: ['svelte'],
-            }),
-        ],
         inlineDynamicImports: true,
-        watch: {
-            clearScreen: false,
-        },
     },
 ];
