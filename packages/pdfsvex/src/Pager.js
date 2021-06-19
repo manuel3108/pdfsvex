@@ -22,11 +22,6 @@ export class Pager {
         this.generated = generated;
         this.options = options;
         this.content = content;
-        // // deep clone the contents, so that we can reuse it later
-        // this.content = content.cloneNode(true);
-
-        // // clear the content
-        // content.innerHTML = '';
     }
 
     pageNow() {

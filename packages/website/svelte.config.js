@@ -7,7 +7,9 @@ const config = {
         // hydrate the <div id="svelte"> element in src/app.html
         adapter: staticAdapter(),
         target: '#svelte',
-        ssr: false,
+        prerender: {
+            force: true,
+        },
     },
 };
 

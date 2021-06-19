@@ -1,27 +1,5 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-    import CodeMirror from 'codemirror';
-    import 'codemirror/lib/codemirror.css';
-
-    import 'codemirror/mode/javascript/javascript.js';
-    // import 'codemirror/mode/shell/shell.js';
-    import 'codemirror/mode/handlebars/handlebars.js';
-    import 'codemirror/mode/htmlmixed/htmlmixed.js';
-    import 'codemirror/mode/xml/xml.js';
-    import 'codemirror/mode/css/css.js';
-    import 'codemirror/mode/markdown/markdown.js';
-    import 'codemirror/addon/edit/closebrackets.js';
-    import 'codemirror/addon/edit/closetag.js';
-    import 'codemirror/addon/edit/continuelist.js';
-    import 'codemirror/addon/comment/comment.js';
-    import 'codemirror/addon/fold/foldcode.js';
-    import 'codemirror/addon/fold/foldgutter.js';
-    import 'codemirror/addon/fold/brace-fold.js';
-    import 'codemirror/addon/fold/xml-fold.js';
-    import 'codemirror/addon/fold/indent-fold.js';
-    import 'codemirror/addon/fold/markdown-fold.js';
-    import 'codemirror/addon/fold/comment-fold.js';
-    import 'codemirror/theme/monokai.css';
+    import { createEventDispatcher, onMount } from 'svelte';
 
     export let content = 'asd';
     let language = 'svelte';
@@ -29,8 +7,34 @@
     let editorElement;
     let firstUpdate = true;
     let theme = 'monokai'; // make sure to load the according sss file
+    let CodeMirror;
+    let isMounted = false;
 
     const dispatch = createEventDispatcher();
+
+    onMount(async () => {
+        CodeMirror = (await import('codemirror')).default;
+
+        await import('codemirror/mode/javascript/javascript.js');
+        await import('codemirror/mode/handlebars/handlebars.js');
+        await import('codemirror/mode/htmlmixed/htmlmixed.js');
+        await import('codemirror/mode/xml/xml.js');
+        await import('codemirror/mode/css/css.js');
+        await import('codemirror/mode/markdown/markdown.js');
+        await import('codemirror/addon/edit/closebrackets.js');
+        await import('codemirror/addon/edit/closetag.js');
+        await import('codemirror/addon/edit/continuelist.js');
+        await import('codemirror/addon/comment/comment.js');
+        await import('codemirror/addon/fold/foldcode.js');
+        await import('codemirror/addon/fold/foldgutter.js');
+        await import('codemirror/addon/fold/brace-fold.js');
+        await import('codemirror/addon/fold/xml-fold.js');
+        await import('codemirror/addon/fold/indent-fold.js');
+        await import('codemirror/addon/fold/markdown-fold.js');
+        await import('codemirror/addon/fold/comment-fold.js');
+
+        isMounted = true;
+    });
 
     $: {
         if (editor !== undefined && content != null) {
@@ -49,7 +53,7 @@
     };
 
     $: {
-        if (editorElement) {
+        if (editorElement && isMounted) {
             createEditor();
         }
     }
