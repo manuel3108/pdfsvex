@@ -1,5 +1,14 @@
 # @pdfsvex/table-of-contents
 
+## 0.1.1
+
+### Patch Changes
+
+- [`a43fe02`](https://github.com/manuel3108/pdfsvex/commit/a43fe023f58966ba421cbaed20bed5f0bc8b5b6b) Thanks [@manuel3108](https://github.com/manuel3108)! - minor improvements
+
+- Updated dependencies []:
+  - @pdfsvex/dynamic-page-number@0.0.11
+
 ## 0.1.0
 
 ### Minor Changes

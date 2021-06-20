@@ -1,5 +1,16 @@
 # pdfsvex-examples
 
+## 0.0.19
+
+### Patch Changes
+
+- Updated dependencies [[`8f11129`](https://github.com/manuel3108/pdfsvex/commit/8f111296c24701f477f7ca4d2812eb8bd51b8552), [`54f1d65`](https://github.com/manuel3108/pdfsvex/commit/54f1d65291471e351e7858641e14c296004ed530), [`a43fe02`](https://github.com/manuel3108/pdfsvex/commit/a43fe023f58966ba421cbaed20bed5f0bc8b5b6b)]:
+  - @pdfsvex/svelte-hmr-support@0.0.4
+  - @pdfsvex/pdfsvex@0.1.3
+  - @pdfsvex/table-of-contents@0.1.1
+  - @pdfsvex/dynamic-page-number@0.0.11
+  - @pdfsvex/keyboard-navigation@0.0.4
+
 ## 0.0.18
 
 ### Patch Changes

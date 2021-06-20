@@ -1,5 +1,11 @@
 # @pdfsvex/svelte-hmr-support
 
+## 0.0.4
+
+### Patch Changes
+
+- [`8f11129`](https://github.com/manuel3108/pdfsvex/commit/8f111296c24701f477f7ca4d2812eb8bd51b8552) Thanks [@manuel3108](https://github.com/manuel3108)! - fix bug causing prod deploys to fail generating the document
+
 ## 0.0.3
 
 ### Patch Changes
