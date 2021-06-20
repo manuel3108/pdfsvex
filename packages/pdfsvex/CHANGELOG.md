@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.3
+
+### Patch Changes
+
+- [`54f1d65`](https://github.com/manuel3108/pdfsvex/commit/54f1d65291471e351e7858641e14c296004ed530) Thanks [@manuel3108](https://github.com/manuel3108)! - fix null undefined reference error
+
 ## 0.1.2
 
 ### Patch Changes
