@@ -25,7 +25,7 @@
   "version": "0.0.13",
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
+  "dependencies": {
     "@pdfsvex/dynamic-page-number": "workspace:*"
   }
 }
