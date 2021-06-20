@@ -1,5 +1,12 @@
 # pdfsvex-examples
 
+## 0.0.18
+
+### Patch Changes
+
+- Updated dependencies [[`6f51d97`](https://github.com/manuel3108/pdfsvex/commit/6f51d974c595dc9f3579e15f290e4a4bdd780384)]:
+  - @pdfsvex/table-of-contents@0.1.0
+
 ## 0.0.17
 
 ### Patch Changes
