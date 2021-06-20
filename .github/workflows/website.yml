@@ -23,7 +23,7 @@ jobs:
 
             - run: npm install -g pnpm
             - run: pnpm install
-            - run: pnpm build --filter "@pdfsvex/website"
+            - run: pnpm build --filter "website"
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
               with:
