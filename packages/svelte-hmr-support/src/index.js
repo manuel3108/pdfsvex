@@ -5,7 +5,7 @@ export function registerHotModuleReloader(pdf) {
     window.__PDFSVEX_HMR_PDF = pdf;
 
     // if we do not have created our hook jet, create it
-    if (!window.__PDFSVEX_HMR_HOOK) {
+    if (window.__SVELTE_HMR && !window.__PDFSVEX_HMR_HOOK) {
         // create the svelte hmr hook
         // Important this uses an internal svelte-hmr hook, so this might break at any time
         // repo: https://github.com/rixo/svelte-hmr
