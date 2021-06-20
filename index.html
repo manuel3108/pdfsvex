@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>PDFSVEX - PDF generation, made easy</title>
+        
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-f25c407a.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-ad612daa.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-e68b18f7.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-7a540564.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-f63fadab.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-f25c407a.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/layout.svelte-e68b18f7.js"),
+						import("/./_app/pages/index.svelte-7a540564.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+    </head>
+    <body>
+        <div id="svelte">
+
+
+<div class="content svelte-1pr8ztm"><div class="img-wrapper svelte-8gyzgp"><img src="/logo.svg" alt="pdfsvex logo" class="svelte-8gyzgp">
+</div>
+    <h1>PDF generation, made easy</h1>
+    <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
+    </p>
+
+    <div class="container svelte-8gjlrl"><a href="https://www.npmjs.com/package/@pdfsvex/pdfsvex" class="svelte-8gjlrl"><img alt="Version" src="https://img.shields.io/npm/v/@pdfsvex/pdfsvex"></a>
+    <a href="https://www.npmjs.com/package/@pdfsvex/pdfsvex" class="svelte-8gjlrl"><img alt="Downloads" src="https://img.shields.io/npm/dw/@pdfsvex/pdfsvex"></a>
+    <a href="https://pdfsvex.serret.dev" target="_blank" class="svelte-8gjlrl"><img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"></a>
+    <a href="https://pdfsvex.serret.dev" target="_blank" class="svelte-8gjlrl"><img alt="License" src="https://img.shields.io/npm/l/@pdfsvex/pdfsvex"></a>
+</div>
+
+    <h1>Table of Contents</h1>
+    <div></div>
+
+    <h1 id="chapter-introduction" class="svelte-1gifjds"><span class="number svelte-1gifjds">1</span>
+            <span class="title">Introduction</span></h1>
+
+
+            <span>You need to supply content</span>
+        
+    
+    <h1 id="chapter-motivation" class="svelte-1gifjds"><span class="number svelte-1gifjds">2</span>
+            <span class="title">Motivation</span></h1>
+
+
+            <span>You need to supply content</span>
+        
+    
+    <h1 id="chapter-getting-started" class="svelte-1gifjds"><span class="number svelte-1gifjds">3</span>
+            <span class="title">Getting started</span></h1>
+
+
+            <span>You need to supply content</span>
+        
+    
+    <h1 id="chapter-packages" class="svelte-1gifjds"><span class="number svelte-1gifjds">4</span>
+            <span class="title">Packages</span></h1>
+
+<h1 id="chapter-packages-pdfsvex" class="svelte-1gifjds smaller"><span class="number svelte-1gifjds">4.1</span>
+            <span class="title">@pdfsvex/pdfsvex</span></h1>
+
+<a href="#chapter-motivation">Motivation</a>
+            <div class="container svelte-8gjlrl"><a href="https://www.npmjs.com/package/@pdfsvex/pdfsvex" class="svelte-8gjlrl"><img alt="Version" src="https://img.shields.io/npm/v/@pdfsvex/pdfsvex"></a>
+    <a href="https://www.npmjs.com/package/@pdfsvex/pdfsvex" class="svelte-8gjlrl"><img alt="Downloads" src="https://img.shields.io/npm/dw/@pdfsvex/pdfsvex"></a>
+    <a href="https://pdfsvex.serret.dev" target="_blank" class="svelte-8gjlrl"><img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"></a>
+    <a href="https://pdfsvex.serret.dev" target="_blank" class="svelte-8gjlrl"><img alt="License" src="https://img.shields.io/npm/l/@pdfsvex/pdfsvex"></a>
+</div>
+
+<p>Easily create table of contents.</p>
+
+<div class="svelte-1ngsftc"><span class="dynamic-component" svelte-repl-components="[{&#34;id&#34;:0,&#34;name&#34;:&#34;App&#34;,&#34;type&#34;:&#34;svelte&#34;,&#34;active&#34;:true,&#34;source&#34;:&#34;<script>\n    import Layout from &#39;./Layout.svelte&#39;;\n    import { PdfDocument } from &#39;@pdfsvex/pdfsvex&#39;;\n    import { onMount } from &#39;svelte&#39;;\n\n    let pdf;\n    const options = {\n        layout: Layout,\n    };\n\n    onMount(() => {\n        pdf.pageNow();\n    });\n\n</script>\n\n<PdfDocument bind:this={pdf} {options} style=\&#34;A5\&#34;>\n    <h1>Welcome a pdfsvex</h1>\n    <p>\n        Visit <a href=\&#34;https://pdfsvex.serret.dev\&#34;>pdfsvex.serret.dev</a> to read the documentation!\n    </p>\n</PdfDocument>&#34;},{&#34;id&#34;:1,&#34;name&#34;:&#34;Layout&#34;,&#34;active&#34;:false,&#34;type&#34;:&#34;svelte&#34;,&#34;source&#34;:&#34;<div class=\&#34;page-content\&#34;>\n</div>&#34;}]" data-component-id="svelte-repl"></span>
+</div>
+
+<table><thead><tr><th>Component</th>
+            <th>Slot</th>
+            <th>Html</th>
+            <th>Css</th>
+            <th>Description</th></tr></thead>
+    <tbody><tr><td class="asd svelte-1m8jvjq">PdfDocument</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td>The main pdf generation wrapper</td>
+</tr>
+    <tr><td class="asd svelte-1m8jvjq">DynamicComponent</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td>Dynamic components that need to be created after the pagination</td>
+</tr></tbody></table>
+
+<h1 id="chapter-PdfDocument" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.1.1</span>
+            <span class="title">Component: PdfDocument</span></h1>
+
+<p>Main PDF Document Wrapper</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">options</span></td>
+    <td class="param-description svelte-5rz8uu">The main options object</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">style</span></td>
+    <td class="param-description svelte-5rz8uu">The document size. One of A3, A4, A5, letter, legal</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>A4</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">landscape</span></td>
+    <td class="param-description svelte-5rz8uu">If the documents should be rendered in landscape</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>false</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">numbered</span></td>
+    <td class="param-description svelte-5rz8uu">Defines if the chapter should be numbered, and if the number should be increased</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>true</td>
+</tr></tbody></table>
+    
+
+<h1 id="chapter-DynamicComponent" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.1.2</span>
+            <span class="title">Component: DynamicComponent</span></h1>
+
+<p>Dynamic components that need to be created after the pagination</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">componentId</span></td>
+    <td class="param-description svelte-5rz8uu">The unique id of this component</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">attributes</span></td>
+    <td class="param-description svelte-5rz8uu">The properties that should be passed to the dynamic component</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>{}</td>
+</tr></tbody></table>
+    
+    
+        <h1 id="chapter-packages-table-of-contents" class="svelte-1gifjds smaller"><span class="number svelte-1gifjds">4.2</span>
+            <span class="title">@pdfsvex/table-of-contents</span></h1>
+
+<div class="container svelte-8gjlrl"><a href="https://www.npmjs.com/package/@pdfsvex/table-of-contents" class="svelte-8gjlrl"><img alt="Version" src="https://img.shields.io/npm/v/@pdfsvex/table-of-contents"></a>
+    <a href="https://www.npmjs.com/package/@pdfsvex/table-of-contents" class="svelte-8gjlrl"><img alt="Downloads" src="https://img.shields.io/npm/dw/@pdfsvex/table-of-contents"></a>
+    <a href="https://pdfsvex.serret.dev" target="_blank" class="svelte-8gjlrl"><img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg"></a>
+    <a href="https://pdfsvex.serret.dev" target="_blank" class="svelte-8gjlrl"><img alt="License" src="https://img.shields.io/npm/l/@pdfsvex/table-of-contents"></a>
+</div>
+
+<p>Easily create table of contents.</p>
+
+<div class="svelte-1ngsftc"><span class="dynamic-component" svelte-repl-components="[{&#34;id&#34;:0,&#34;name&#34;:&#34;App&#34;,&#34;type&#34;:&#34;svelte&#34;,&#34;active&#34;:true,&#34;source&#34;:&#34;<script>\n    import Layout from &#39;./Layout.svelte&#39;;\n    import { PdfDocument } from &#39;@pdfsvex/pdfsvex&#39;;\n    import { \n        TableOfContentsDefault,\n        ChapterDefault,\n        ChapterReferenceDefault\n    } from &#39;@pdfsvex/table-of-contents@latest&#39;;\n    import { onMount } from &#39;svelte&#39;;\n\n    let pdf;\n    const options = {\n        layout: Layout,\n    };\n\n    onMount(() => {\n        pdf.pageNow();\n    });\n\n</script>\n\n<PdfDocument bind:this={pdf} {options} style=\&#34;A5\&#34;>\n    <TableOfContentsDefault />\n\n    <ChapterDefault key=\&#34;introduction\&#34; name=\&#34;Introduction\&#34; />\n    <ChapterDefault key=\&#34;motivation\&#34; name=\&#34;Motivation\&#34; />\n    <ChapterDefault key=\&#34;getting-started\&#34; name=\&#34;Getting started\&#34; />\n    <ChapterDefault key=\&#34;packages\&#34; name=\&#34;Packages\&#34;>\n        <ChapterDefault key=\&#34;packages-pdfsvex\&#34; name=\&#34;@pdfsvex/pdfsvex\&#34;>\n            <ChapterReferenceDefault key=\&#34;motivation\&#34; />\n        </ChapterDefault>\n        <ChapterDefault\n            key=\&#34;packages-table-of-contents\&#34;\n            name=\&#34;@pdfsvex/table-of-contents\&#34;\n        >\n        </ChapterDefault>\n    </ChapterDefault>\n</PdfDocument>&#34;},{&#34;id&#34;:1,&#34;name&#34;:&#34;Layout&#34;,&#34;active&#34;:false,&#34;type&#34;:&#34;svelte&#34;,&#34;source&#34;:&#34;<div class=\&#34;page-content\&#34;>\n</div>&#34;}]" data-component-id="svelte-repl"></span>
+</div>
+
+<table><thead><tr><th>Component</th>
+            <th>Slot</th>
+            <th>Html</th>
+            <th>Css</th>
+            <th>Description</th></tr></thead>
+    <tbody><tr><td class="asd svelte-1m8jvjq">Chapter</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td>Bare logic for adding chapters</td>
+</tr>
+    <tr><td class="asd svelte-1m8jvjq">ChapterReference</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td>Bare logic referencing a chapter</td>
+</tr>
+    <tr><td class="asd svelte-1m8jvjq">TableOfContents</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td>Bare logic for displaying a table of contents</td>
+</tr>
+    <tr><td class="asd svelte-1m8jvjq">ChapterDefault</td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td>Implementation of Chapter, contains elements and styling</td>
+</tr>
+    <tr><td class="asd svelte-1m8jvjq">ChapterReferenceDefault</td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td>Implementation of ChapterReference, contains elements and styling</td>
+</tr>
+    <tr><td class="asd svelte-1m8jvjq">TableOfContentsDefault</td>
+    <td class="center svelte-1m8jvjq"></td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td class="center svelte-1m8jvjq">✅</td>
+    <td>Implementation of TableOfContents, contains elements and styling</td>
+</tr></tbody></table>
+
+<h1 id="chapter-Chapter" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.2.1</span>
+            <span class="title">Component: Chapter</span></h1>
+
+<p>Implements logic for creating custom styled chapter components.</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">name</span></td>
+    <td class="param-description svelte-5rz8uu">The name or desceiption of the chapter</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">key</span></td>
+    <td class="param-description svelte-5rz8uu">Defines the unique key of the chapter. This key is used as an internal identifier. Aditionally this  property could be used to create html ids</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">includeInTableOfContents</span></td>
+    <td class="param-description svelte-5rz8uu">Defines if the chapter should be visible in the table of contents</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>true</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">numbered</span></td>
+    <td class="param-description svelte-5rz8uu">Defines if the chapter should be numbered, and if the number should be increased</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>true</td>
+</tr></tbody></table>
+    
+
+<h1 id="chapter-ChapterReference" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.2.2</span>
+            <span class="title">Component: ChapterReference</span></h1>
+
+<p>Implements logic for referencing another chapter</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">key</span></td>
+    <td class="param-description svelte-5rz8uu">The unique key of the chapter created during the initialization of the chapter</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr></tbody></table>
+    
+
+<h1 id="chapter-TableOfContents" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.2.3</span>
+            <span class="title">Component: TableOfContents</span></h1>
+
+<p>Implements logic for creating a table of contents</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">chapters</span></td>
+    <td class="param-description svelte-5rz8uu">(internal) A filtered list of chapters to display in table of contents</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>undefined</td>
+</tr></tbody></table>
+    
+
+<h1 id="chapter-ChapterDefault" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.2.4</span>
+            <span class="title">Component: ChapterDefault</span></h1>
+
+<p>Implements logic, html and styling for creating a table of contents</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">name</span></td>
+    <td class="param-description svelte-5rz8uu">The name or desceiption of the chapter</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">key</span></td>
+    <td class="param-description svelte-5rz8uu">Defines the unique key of the chapter. This key is used as an internal identifier. Aditionally this  property could be used to create html ids</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">includeInTableOfContents</span></td>
+    <td class="param-description svelte-5rz8uu">Defines if the chapter should be visible in the table of contents</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>true</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">numbered</span></td>
+    <td class="param-description svelte-5rz8uu">Defines if the chapter should be numbered, and if the number should be increased</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>true</td>
+</tr></tbody></table>
+    
+
+<h1 id="chapter-ChapterReferenceDefault" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.2.5</span>
+            <span class="title">Component: ChapterReferenceDefault</span></h1>
+
+<p>Implements logic, html and styling for referencing another chapter</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">key</span></td>
+    <td class="param-description svelte-5rz8uu">The unique key of the chapter created during the initialization of the chapter</td>
+    <td class="param-optional svelte-5rz8uu"></td>
+    <td></td>
+</tr></tbody></table>
+    
+
+<h1 id="chapter-TableOfContentsDefaults" class="svelte-1gifjds  smallest"><span class="number svelte-1gifjds">4.2.6</span>
+            <span class="title">Component: TableOfContentsDefaults</span></h1>
+
+<p>Implements logic, html and styling for creating a table of contents</p>
+
+    <table><thead><tr><th>Name</th>
+                <th>Description</th>
+                <th>Optional</th>
+                <th>Default</th></tr></thead>
+        <tbody><tr><td><span class="param-name svelte-5rz8uu">title</span></td>
+    <td class="param-description svelte-5rz8uu">Heading displayed above the table of contents</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>Table of Contents</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">indentWidthInPx</span></td>
+    <td class="param-description svelte-5rz8uu">Number of pixels to intend each child elments</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>15</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">startSizePt</span></td>
+    <td class="param-description svelte-5rz8uu">Start size of the font in pt. Reduced by &quot;decrementSize&quot; for each child.</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>14</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">decrementSize</span></td>
+    <td class="param-description svelte-5rz8uu">Number &quot;startSizePt&quot; will be reduced by for each child</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>1</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">depth</span></td>
+    <td class="param-description svelte-5rz8uu">(internal) the current depth count</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>0</td>
+</tr>
+    <tr><td><span class="param-name svelte-5rz8uu">chapters</span></td>
+    <td class="param-description svelte-5rz8uu">(internal) A filtered list of chapters to display in table of contents</td>
+    <td class="param-optional svelte-5rz8uu">✅</td>
+    <td>undefined</td>
+</tr></tbody></table>
+    
+    
+    </div>
+<div class="generated A4 svelte-1pr8ztm">Loading...
+</div>
+
+
+
+	
+</div>
+    </body>
+</html>
