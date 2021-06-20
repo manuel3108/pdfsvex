@@ -17,6 +17,7 @@
     "@pdfsvex/alternate-svelte-repl": "workspace:*",
     "@pdfsvex/dynamic-page-number": "workspace:*",
     "@pdfsvex/pdfsvex": "workspace:*",
+    "@pdfsvex/svelte-hmr-support": "workspace:*",
     "@pdfsvex/table-of-contents": "workspace:*",
     "codemirror": "^5.61.1",
     "uid": "^2.0.0"
