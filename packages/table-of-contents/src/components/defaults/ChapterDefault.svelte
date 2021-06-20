@@ -4,10 +4,11 @@
     export let key;
     export let name;
     export let includeInTableOfContents = true;
+    export let numbered = true;
 
 </script>
 
-<Chapter {key} {name} {includeInTableOfContents}>
+<Chapter {key} {name} {numbered} {includeInTableOfContents}>
     <svelte:fragment slot="title" let:chapter>
         <h1
             id={chapter.key}

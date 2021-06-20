@@ -2,7 +2,7 @@
     import { PageNumber } from '@pdfsvex/dynamic-page-number';
     import { chapters as chaptersFromStore } from '../store';
 
-    export let chapters;
+    export let chapters = undefined;
 
     let chaptersToShow;
 
