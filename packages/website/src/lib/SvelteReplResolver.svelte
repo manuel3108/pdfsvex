@@ -19,4 +19,4 @@
 
 </script>
 
-<AlternateSvelteRepl {components} />
+<AlternateSvelteRepl {components} height="600px" />
