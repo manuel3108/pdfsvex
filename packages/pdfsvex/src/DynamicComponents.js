@@ -55,6 +55,9 @@ export default class DynamicComponents {
      * @returns the component config
      */
     static getComponentInfoFromOptions(options, componentId) {
-        return options.dynamicComponents.find((c) => c.id === componentId);
+        if (options.dynamicComponents) {
+            return options.dynamicComponents.find((c) => c.id === componentId);
+        }
+        return undefined;
     }
 }
