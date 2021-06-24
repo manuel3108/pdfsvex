@@ -16,16 +16,27 @@ export default class BaseNode {
      * @returns {HTMLElement} created node with the copied content
      */
     static createFrom(node) {
-        const createdNode = document.createElement(node.tagName);
+        let createdNode = undefined;
+
+        if (node.tagName === 'svg' || node instanceof SVGElement) {
+            // svg nodes and all its children need to be created differently: https://www.brightec.co.uk/blog/svg-wouldnt-render
+            // how to detect svg elements: https://stackoverflow.com/questions/20748836/how-do-i-tell-if-a-dom-element-is-html-or-svg
+            createdNode = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                node.tagName
+            );
+        } else {
+            createdNode = document.createElement(node.tagName);
+        }
+
         // copy all attributes to the new created node
         // these attributes can contain classnames or style informations
         if (node.attributes) {
             const attributes = Array.prototype.slice.call(node.attributes);
             let attribute;
             while ((attribute = attributes.pop())) {
-                createdNode.setAttributeNS(
-                    null,
-                    BaseNode.transformAttributeName(attribute.nodeName),
+                createdNode.setAttribute(
+                    attribute.nodeName,
                     attribute.nodeValue
                 );
             }
@@ -33,7 +44,6 @@ export default class BaseNode {
             if (createdNode.hasAttribute(ATTRIBUTE_NAME_SAVED_ID)) {
                 BaseNode.restoreId(createdNode);
             }
-
         }
         return createdNode;
     }
@@ -66,21 +76,5 @@ export default class BaseNode {
     static hasPageBreakAfterAlways(node) {
         const computedStyles = window.getComputedStyle(node);
         return computedStyles.getPropertyValue('page-break-after') === 'always';
-    }
-
-    /**
-     * Transform attribute names back to camelCase if necessary.
-     * Some attributes like attributes for SVG elements need to be in camel case.
-     * But JavaScript alsways returns them in uppercase. So we need to manually apply this transformation.
-     * @param {string} name attribute name to transform
-     * @returns {string} transformed attribute
-     */
-    static transformAttributeName(name) {
-        switch (name) {
-            case "preserveaspectratio":
-                return "preserveAspectRatio"
-            default:
-                return name;
-        }
     }
 }
