@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.5
+
+### Patch Changes
+
+- [`b1a071f`](https://github.com/manuel3108/pdfsvex/commit/b1a071f11232a5f82c35f58956b7ceee70ec0f17) Thanks [@Manuel-Innovapps](https://github.com/Manuel-Innovapps)! - Correctly create svg elements to render them during element creation
+
 ## 0.1.4
 
 ### Patch Changes
