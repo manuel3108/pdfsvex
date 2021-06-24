@@ -1,6 +1,6 @@
 {
   "name": "pdfsvex-examples",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
