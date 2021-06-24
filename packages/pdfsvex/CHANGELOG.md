@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.4
+
+### Patch Changes
+
+- [`0191d90`](https://github.com/manuel3108/pdfsvex/commit/0191d905522655a195bfaaf4c568aa0f5f43a246) Thanks [@manuel3108](https://github.com/manuel3108)! - Fix bug with lowercasing svg attributes
+
 ## 0.1.3
 
 ### Patch Changes
