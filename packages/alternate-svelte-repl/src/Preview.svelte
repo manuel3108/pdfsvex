@@ -1,4 +1,8 @@
 <script>
+    import { Stretch } from 'svelte-loading-spinners';
+
+    export let isLoading = true;
+
     const srcdoc = `<!doctype html>
 <html>
 	<head>
@@ -30,16 +34,46 @@
     export function postMessage(data) {
         iframe.contentWindow.postMessage(data, '*');
     }
-
 </script>
 
-<iframe title="Rendered REPL" bind:this={iframe} {srcdoc} />
+<div class="wrapper">
+    {#if isLoading}
+        <div class="loading-wrapper">
+            <div class="loading-background" />
+            <div class="loader">
+                <Stretch size="60" color="#aaa" unit="px" duration="1s" />
+            </div>
+        </div>
+    {/if}
+    <iframe title="Rendered REPL" bind:this={iframe} {srcdoc} />
+</div>
 
 <style>
+    .wrapper,
     iframe {
         height: 100%;
         width: 100%;
         border: 0;
+        position: relative;
     }
 
+    .loading-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(19, 19, 19, 0.5);
+    }
+
+    .loading-wrapper {
+        position: absolute;
+        z-index: 10000;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .loader {
+        margin: 0 auto;
+    }
 </style>

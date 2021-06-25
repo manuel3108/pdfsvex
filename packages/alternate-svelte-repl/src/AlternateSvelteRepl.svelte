@@ -23,6 +23,7 @@
     let codeToDisplay = '';
     let componentIndex = 0;
     let firstComponentUpdate = true;
+    let isLoading = true;
 
     $: {
         if (firstComponentUpdate) {
@@ -49,24 +50,27 @@
 
         worker = new Worker(blobURL); // spawn new worker
 
-        worker.onmessage = function (e) {
-            if (preview && preview.postMessage) {
-                preview.postMessage(e.data);
-            }
-        };
-        worker.postMessage(components); // Send data to our worker.
+        setTimeout(() => {
+            worker.onmessage = function (e) {
+                if (preview && preview.postMessage) {
+                    preview.postMessage(e.data);
+                    isLoading = false;
+                }
+            };
+            worker.postMessage(components); // Send data to our worker.
+        }, 1000);
     });
 
     function updateCode({ detail: { code } }) {
         components[componentIndex].source = code;
         worker.postMessage(components);
+        isLoading = true;
     }
 
     function tabChanged({ detail: { newIndex, oldIndex } }) {
         componentIndex = newIndex;
         codeToDisplay = components[newIndex].source;
     }
-
 </script>
 
 <div class="svelte-repl" style="height: {height};">
@@ -85,7 +89,7 @@
         {/if}
         {#if $viewStore === 'full' || $viewStore === 'preview'}
             <div class="preview" class:full-width={$viewStore === 'preview'}>
-                <Preview bind:this={preview} />
+                <Preview bind:this={preview} {isLoading} />
             </div>
         {/if}
     </div>
@@ -112,5 +116,4 @@
     .full-width {
         width: 100% !important;
     }
-
 </style>

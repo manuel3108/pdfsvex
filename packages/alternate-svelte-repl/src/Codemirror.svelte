@@ -9,6 +9,7 @@
     let theme = 'monokai'; // make sure to load the according sss file
     let CodeMirror;
     let isMounted = false;
+    let hadFirstCodeChange = false;
 
     const dispatch = createEventDispatcher();
 
@@ -91,16 +92,19 @@
         };
         editor = CodeMirror(editorElement, opts);
         editor.on('change', (editor) => {
-            dispatch('change', {
-                code: editor.getValue(),
-            });
+            if (hadFirstCodeChange) {
+                dispatch('change', {
+                    code: editor.getValue(),
+                });
+            } else {
+                hadFirstCodeChange = true;
+            }
         });
 
         if (content) {
             editor.setValue(content);
         }
     }
-
 </script>
 
 <div class="codeeditor" bind:this={editorElement} />
@@ -114,5 +118,4 @@
     :global(.CodeMirror) {
         height: 100% !important;
     }
-
 </style>

@@ -21,6 +21,7 @@ importers:
       rollup: ^2.0.0
       rollup-plugin-svelte: ^6.0.0
       svelte: ^3.0.0
+      svelte-loading-spinners: ^0.1.5
     dependencies:
       codemirror: 5.61.1
     devDependencies:
@@ -28,6 +29,7 @@ importers:
       rollup: 2.51.2
       rollup-plugin-svelte: 6.1.1_rollup@2.51.2+svelte@3.38.2
       svelte: 3.38.2
+      svelte-loading-spinners: 0.1.5
 
   packages/dynamic-page-number:
     specifiers:
@@ -64,7 +66,7 @@ importers:
       '@pdfsvex/table-of-contents': link:../table-of-contents
       decimal-to-roman-converter: 1.0.0
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
+      '@sveltejs/kit': 1.0.0-next.117_svelte@3.38.2
       svelte: 3.38.2
 
   packages/keyboard-navigation:
@@ -133,7 +135,7 @@ importers:
       uid: 2.0.0
     devDependencies:
       '@sveltejs/adapter-static': 1.0.0-next.13
-      '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
+      '@sveltejs/kit': 1.0.0-next.117_svelte@3.38.2
       codesandbox: 2.2.3
       svelte: 3.38.2
 
@@ -495,24 +497,24 @@ packages:
     resolution: {integrity: sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.115_svelte@3.38.2:
-    resolution: {integrity: sha512-XbkL9hI7LI0Dfum9crtBIeENqdJEjMfDaX3qQTTgdYkhlb4KNNYErmDWo8bJNJKEfdV0BJBVN/I0wiat3cd/yA==}
-    engines: {node: ^12.20 || ^14.13.1 || >= 16}
+  /@sveltejs/kit/1.0.0-next.117_svelte@3.38.2:
+    resolution: {integrity: sha512-9ihHUOhQA5KRfKNTlW/F3zMFKx9zQeEyFvgT+EebloR21xs41w9k0M4ZelOWk+59fV/SvTPQlKNs/tSenDcyBQ==}
+    engines: {node: ^12.20 || >=14.13}
     hasBin: true
     peerDependencies:
-      svelte: ^3.38.2
+      svelte: ^3.34.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.11_svelte@3.38.2+vite@2.3.7
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.11_svelte@3.38.2+vite@2.3.8
       cheap-watch: 1.0.3
       sade: 1.7.4
       svelte: 3.38.2
-      vite: 2.3.7
+      vite: 2.3.8
     transitivePeerDependencies:
       - rollup
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.11_svelte@3.38.2+vite@2.3.7:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.11_svelte@3.38.2+vite@2.3.8:
     resolution: {integrity: sha512-EYR1I145k5rflVqhPwk3442m3bkYimTKSHM9uO5KdomXzt+GS9ZSBJQE3/wy1Di9V8OnGa3oKpckI3OZsHkTIA==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
@@ -525,7 +527,7 @@ packages:
       require-relative: 0.8.7
       svelte: 3.38.2
       svelte-hmr: 0.14.4_svelte@3.38.2
-      vite: 2.3.7
+      vite: 2.3.8
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -3084,8 +3086,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.52.1:
-    resolution: {integrity: sha512-/SPqz8UGnp4P1hq6wc9gdTqA2bXQXGx13TtoL03GBm6qGRI6Hm3p4Io7GeiHNLl0BsQAne1JNYY+q/apcY933w==}
+  /rollup/2.52.2:
+    resolution: {integrity: sha512-4RlFC3k2BIHlUsJ9mGd8OO+9Lm2eDF5P7+6DNQOp5sx+7N/1tFM01kELfbxlMX3MxT6owvLB1ln4S3QvvQlbUA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3409,6 +3411,10 @@ packages:
       svelte: 3.38.2
     dev: true
 
+  /svelte-loading-spinners/0.1.5:
+    resolution: {integrity: sha512-HpNwNd0jfZAQ2DDMwe5yF8hSUeSSTI5LpkNFhmBDmS/G5r/GdWEP4o6V79sXFC6B1ts+e799aM5FqIC3TyosKw==}
+    dev: true
+
   /svelte/3.38.2:
     resolution: {integrity: sha512-q5Dq0/QHh4BLJyEVWGe7Cej5NWs040LWjMbicBGZ+3qpFWJ1YObRmUDZKbbovddLC9WW7THTj3kYbTOFmU9fbg==}
     engines: {node: '>= 8'}
@@ -3642,15 +3648,15 @@ packages:
       builtins: 1.0.3
     dev: true
 
-  /vite/2.3.7:
-    resolution: {integrity: sha512-Y0xRz11MPYu/EAvzN94+FsOZHbSvO6FUvHv127CyG7mV6oDoay2bw+g5y9wW3Blf8OY3chaz3nc/DcRe1IQ3Nw==}
+  /vite/2.3.8:
+    resolution: {integrity: sha512-QiEx+iqNnJntSgSF2fWRQvRey9pORIrtNJzNyBJXwc+BdzWs83FQolX84cTBo393cfhObrtWa6180dAa4NLDiQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
       esbuild: 0.12.9
       postcss: 8.3.5
       resolve: 1.20.0
-      rollup: 2.52.1
+      rollup: 2.52.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
