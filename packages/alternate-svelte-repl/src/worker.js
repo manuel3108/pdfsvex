@@ -6,10 +6,18 @@ export function setupWorker() {
     importScripts(`${CDN_URL}/svelte/compiler.js`);
     importScripts(CDN_URL + '/rollup/dist/rollup.browser.js');
 
+    const cache = {};
+
     const component_lookup = new Map();
 
     async function fetch_package(url) {
-        return (await fetch(url)).text();
+        if (cache[url] !== undefined) {
+            return cache[url];
+        }
+
+        const text = (await fetch(url)).text();
+        cache[url] = text;
+        return text;
     }
 
     function generate_lookup(components) {
