@@ -87,11 +87,15 @@
                 <Codemirror content={codeToDisplay} on:change={updateCode} />
             </div>
         {/if}
-        {#if $viewStore === 'full' || $viewStore === 'preview'}
-            <div class="preview" class:full-width={$viewStore === 'preview'}>
-                <Preview bind:this={preview} {isLoading} />
-            </div>
-        {/if}
+        <div
+            class="preview"
+            class:full-width={$viewStore === 'preview'}
+            style={$viewStore === 'full' || $viewStore === 'preview'
+                ? 'display: block;'
+                : 'display: none'}
+        >
+            <Preview bind:this={preview} {isLoading} />
+        </div>
     </div>
 </div>
 
