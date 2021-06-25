@@ -32,7 +32,9 @@
     let iframe;
 
     export function postMessage(data) {
-        iframe.contentWindow.postMessage(data, '*');
+        if (iframe.contentWindow) {
+            iframe.contentWindow.postMessage(data, '*');
+        }
     }
 </script>
 
