@@ -9,16 +9,16 @@
 
 		
 
-		<link rel="modulepreload" href="/./_app/start-3d351a53.js">
+		<link rel="modulepreload" href="/./_app/start-249d8c08.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-ad612daa.js">
 		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
 		<link rel="modulepreload" href="/./_app/layout.svelte-e68b18f7.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-540d2342.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-308ad363.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
-		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-56a1c112.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-7364736d.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-3d351a53.js";
+			import { start } from "/./_app/start-249d8c08.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":"/."},
@@ -32,7 +32,7 @@
 					error: null,
 					nodes: [
 						import("/./_app/layout.svelte-e68b18f7.js"),
-						import("/./_app/pages/index.svelte-540d2342.js")
+						import("/./_app/pages/index.svelte-308ad363.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -183,7 +183,7 @@
 
 <p>Easily create table of contents.</p>
 
-<div class="svelte-1ngsftc"><span class="dynamic-component" svelte-repl-components="[{&#34;id&#34;:0,&#34;name&#34;:&#34;App&#34;,&#34;type&#34;:&#34;svelte&#34;,&#34;active&#34;:true,&#34;source&#34;:&#34;<script>\n    import Layout from &#39;./Layout.svelte&#39;;\n    import { PdfDocument } from &#39;@pdfsvex/pdfsvex&#39;;\n    import { \n        TableOfContentsDefault,\n        ChapterDefault,\n        ChapterReferenceDefault\n    } from &#39;@pdfsvex/table-of-contents@latest&#39;;\n    import { onMount } from &#39;svelte&#39;;\n\n    let pdf;\n    const options = {\n        layout: Layout,\n    };\n\n    onMount(() => {\n        pdf.pageNow();\n    });\n\n</script>\n\n<PdfDocument bind:this={pdf} {options} style=\&#34;A5\&#34;>\n    <TableOfContentsDefault />\n\n    <ChapterDefault key=\&#34;introduction\&#34; name=\&#34;Introduction\&#34; />\n    <ChapterDefault key=\&#34;motivation\&#34; name=\&#34;Motivation\&#34; />\n    <ChapterDefault key=\&#34;getting-started\&#34; name=\&#34;Getting started\&#34; />\n    <ChapterDefault key=\&#34;packages\&#34; name=\&#34;Packages\&#34;>\n        <ChapterDefault key=\&#34;packages-pdfsvex\&#34; name=\&#34;@pdfsvex/pdfsvex\&#34;>\n            <ChapterReferenceDefault key=\&#34;motivation\&#34; />\n        </ChapterDefault>\n        <ChapterDefault\n            key=\&#34;packages-table-of-contents\&#34;\n            name=\&#34;@pdfsvex/table-of-contents\&#34;\n        >\n        </ChapterDefault>\n    </ChapterDefault>\n</PdfDocument>&#34;},{&#34;id&#34;:1,&#34;name&#34;:&#34;Layout&#34;,&#34;active&#34;:false,&#34;type&#34;:&#34;svelte&#34;,&#34;source&#34;:&#34;<div class=\&#34;page-content\&#34;>\n</div>&#34;}]" data-component-id="svelte-repl"></span>
+<div class="svelte-1ngsftc"><span class="dynamic-component" svelte-repl-components="[{&#34;id&#34;:0,&#34;name&#34;:&#34;App&#34;,&#34;type&#34;:&#34;svelte&#34;,&#34;active&#34;:true,&#34;source&#34;:&#34;<script>\n    import Layout from &#39;./Layout.svelte&#39;;\n    import { PdfDocument } from &#39;@pdfsvex/pdfsvex&#39;;\n    import { TableOfContentsDefault, ChapterDefault, ChapterReferenceDefault } from &#39;@pdfsvex/table-of-contents@latest&#39;;\n    import { onMount } from &#39;svelte&#39;;\n\n    let pdf;\n    const options = {\n        layout: Layout,\n    };\n\n    onMount(() => {\n        pdf.pageNow();\n    });\n\n</script>\n\n<PdfDocument bind:this={pdf} {options} style=\&#34;A5\&#34;>\n    <TableOfContentsDefault />\n\n    <ChapterDefault key=\&#34;introduction\&#34; name=\&#34;Introduction\&#34; />\n    <ChapterDefault key=\&#34;motivation\&#34; name=\&#34;Motivation\&#34; />\n    <ChapterDefault key=\&#34;getting-started\&#34; name=\&#34;Getting started\&#34; />\n    <ChapterDefault key=\&#34;packages\&#34; name=\&#34;Packages\&#34;>\n        <ChapterDefault key=\&#34;packages-pdfsvex\&#34; name=\&#34;@pdfsvex/pdfsvex\&#34;>\n            <ChapterReferenceDefault key=\&#34;motivation\&#34; />\n        </ChapterDefault>\n        <ChapterDefault\n            key=\&#34;packages-table-of-contents\&#34;\n            name=\&#34;@pdfsvex/table-of-contents\&#34;\n        >\n        </ChapterDefault>\n    </ChapterDefault>\n</PdfDocument>&#34;},{&#34;id&#34;:1,&#34;name&#34;:&#34;Layout&#34;,&#34;active&#34;:false,&#34;type&#34;:&#34;svelte&#34;,&#34;source&#34;:&#34;<div class=\&#34;page-content\&#34;>\n</div>&#34;}]" data-component-id="svelte-repl"></span>
 </div>
 
 <table><thead><tr><th>Component</th>
