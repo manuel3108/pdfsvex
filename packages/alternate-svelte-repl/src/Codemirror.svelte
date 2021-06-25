@@ -66,7 +66,6 @@
 
         const opts = {
             lineNumbers: true,
-            lineWrapping: true,
             indentWithTabs: true,
             indentUnit: 2,
             tabSize: 2,

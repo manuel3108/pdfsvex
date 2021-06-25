@@ -38,7 +38,11 @@
     <div class="modal is-active">
         <div class="modal-background" on:click={closeModal} />
         <div class="modal-content">
-            <AlternateSvelteRepl {components} height="100%" />
+            <AlternateSvelteRepl
+                {components}
+                height="100%"
+                horizontal={false}
+            />
         </div>
     </div>
 {/if}

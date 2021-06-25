@@ -17,6 +17,7 @@
     ];
     export let view = 'full';
     export let height;
+    export let horizontal = true;
 
     let preview;
     let worker;
@@ -81,15 +82,19 @@
             on:tabChanged={tabChanged}
         />
     </div>
-    <div class="editor-preview-container">
+    <div
+        class="editor-preview-container"
+        class:above={horizontal}
+        class:beside={!horizontal}
+    >
         {#if $viewStore === 'full' || $viewStore === 'editor'}
-            <div class="editor" class:full-width={$viewStore === 'editor'}>
+            <div class="editor" class:full-size={$viewStore === 'editor'}>
                 <Codemirror content={codeToDisplay} on:change={updateCode} />
             </div>
         {/if}
         <div
             class="preview"
-            class:full-width={$viewStore === 'preview'}
+            class:full-size={$viewStore === 'preview'}
             style={$viewStore === 'full' || $viewStore === 'preview'
                 ? 'display: block;'
                 : 'display: none'}
@@ -104,20 +109,28 @@
         height: 25px;
     }
 
-    .editor-preview-container {
+    .editor-preview-container.beside {
         display: flex;
         align-items: stretch;
         width: 100%;
         height: calc(100% - 25px);
     }
 
-    .editor-preview-container div {
-        align-items: center;
-        display: flex;
+    .editor-preview-container.above {
+        width: 100%;
+        height: calc(100% - 25px);
+    }
+
+    .editor-preview-container.above div {
+        height: 50%;
+    }
+
+    .editor-preview-container.beside div {
         width: 50%;
     }
 
-    .full-width {
+    .full-size {
         width: 100% !important;
+        height: 100% !important;
     }
 </style>

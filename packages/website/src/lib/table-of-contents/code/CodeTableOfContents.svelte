@@ -10,11 +10,7 @@
             source: `<script>
     import Layout from './Layout.svelte';
     import { PdfDocument } from '@pdfsvex/pdfsvex';
-    import { 
-        TableOfContentsDefault,
-        ChapterDefault,
-        ChapterReferenceDefault
-    } from '@pdfsvex/table-of-contents@latest';
+    import { TableOfContentsDefault, ChapterDefault, ChapterReferenceDefault } from '@pdfsvex/table-of-contents@latest';
     import { onMount } from 'svelte';
 
     let pdf;
@@ -55,7 +51,6 @@
 </div>`,
         },
     ];
-
 </script>
 
 <SvelteRepl {components} />
