@@ -21,7 +21,6 @@ importers:
       rollup: ^2.0.0
       rollup-plugin-svelte: ^6.0.0
       svelte: ^3.0.0
-      svelte-loading-spinners: ^0.1.5
     dependencies:
       codemirror: 5.61.1
     devDependencies:
@@ -29,7 +28,6 @@ importers:
       rollup: 2.51.2
       rollup-plugin-svelte: 6.1.1_rollup@2.51.2+svelte@3.38.2
       svelte: 3.38.2
-      svelte-loading-spinners: 0.1.5
 
   packages/dynamic-page-number:
     specifiers:
@@ -3409,10 +3407,6 @@ packages:
       svelte: '>=3.19.0'
     dependencies:
       svelte: 3.38.2
-    dev: true
-
-  /svelte-loading-spinners/0.1.5:
-    resolution: {integrity: sha512-HpNwNd0jfZAQ2DDMwe5yF8hSUeSSTI5LpkNFhmBDmS/G5r/GdWEP4o6V79sXFC6B1ts+e799aM5FqIC3TyosKw==}
     dev: true
 
   /svelte/3.38.2:

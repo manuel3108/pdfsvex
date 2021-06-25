@@ -1,5 +1,5 @@
 <script>
-    import { Stretch } from 'svelte-loading-spinners';
+    import LoadingSpinner from './LoadingSpinner.svelte';
 
     export let isLoading = true;
 
@@ -43,7 +43,7 @@
         <div class="loading-wrapper">
             <div class="loading-background" />
             <div class="loader">
-                <Stretch size="60" color="#aaa" unit="px" duration="1s" />
+                <LoadingSpinner color="#aaa" />
             </div>
         </div>
     {/if}

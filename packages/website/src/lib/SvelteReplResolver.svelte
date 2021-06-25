@@ -4,7 +4,6 @@
     import { ATTRIBUTE_NAME_COMPONENTS } from './Constants';
     import 'codemirror/lib/codemirror.css';
     import 'codemirror/theme/monokai.css';
-    import clickOutside from 'svelte-outside-click';
 
     export let element;
     export let pages;
