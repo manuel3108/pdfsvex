@@ -1,5 +1,15 @@
 # pdfsvex-examples
 
+## 0.0.22
+
+### Patch Changes
+
+- Updated dependencies [[`535002f`](https://github.com/manuel3108/pdfsvex/commit/535002fd4d77944e04a57b29e6506c814634b77e)]:
+  - @pdfsvex/pdfsvex@0.1.6
+  - @pdfsvex/dynamic-page-number@0.0.14
+  - @pdfsvex/keyboard-navigation@0.0.7
+  - @pdfsvex/table-of-contents@0.1.4
+
 ## 0.0.21
 
 ### Patch Changes

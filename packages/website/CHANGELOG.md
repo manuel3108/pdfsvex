@@ -1,5 +1,15 @@
 # @pdfsvex/website
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [[`cd08276`](https://github.com/manuel3108/pdfsvex/commit/cd08276a1af4ec7f320bf27d4f9fb4c01946ac23), [`ebb5973`](https://github.com/manuel3108/pdfsvex/commit/ebb5973944d972feb692a4d57dd2fedb587005ea), [`841d32d`](https://github.com/manuel3108/pdfsvex/commit/841d32d6c19163cb0a5f44757c6cab57c3e18619), [`535002f`](https://github.com/manuel3108/pdfsvex/commit/535002fd4d77944e04a57b29e6506c814634b77e), [`03f9b69`](https://github.com/manuel3108/pdfsvex/commit/03f9b692ff2504d1109ce9aa8d2fd585e2633255), [`c38f3a0`](https://github.com/manuel3108/pdfsvex/commit/c38f3a031d1c6e17e28d6eb2421da1190d2e5d1c), [`20e2917`](https://github.com/manuel3108/pdfsvex/commit/20e2917619e0c1ddc9ede6e0fd617111546ec89c)]:
+  - @pdfsvex/alternate-svelte-repl@0.0.3
+  - @pdfsvex/pdfsvex@0.1.6
+  - @pdfsvex/dynamic-page-number@0.0.14
+  - @pdfsvex/table-of-contents@0.1.4
+
 ## 0.0.5
 
 ### Patch Changes
