@@ -5,24 +5,27 @@
     export let options;
     export let style = 'A4';
     export let landscape = false;
+    export let present = false;
 
     let content;
     let generated;
     let pager;
 
     onMount(() => {
-        document.body.classList.add(style);
-        if (landscape) {
-            document.body.classList.add('landscape');
-        }
-
         pager = new Pager(content, generated, options);
     });
 
     export function pageNow() {
         pager.pageNow();
-    }
 
+        if (present) {
+            // scale on page to the screen height
+            const windowHeight = window.innerHeight;
+            const pageHeight = generated.querySelector('.sheet').clientHeight;
+            const zoom = windowHeight / pageHeight;
+            generated.style.transform = 'scale(' + zoom + ', ' + zoom + ')';
+        }
+    }
 </script>
 
 <div bind:this={content} class="content">
@@ -143,5 +146,4 @@
             width: 357mm;
         }
     }
-
 </style>
