@@ -9,6 +9,7 @@
 
     let content;
     let generated;
+    let wrapper;
     let pager;
 
     onMount(() => {
@@ -24,6 +25,7 @@
             const pageHeight = generated.querySelector('.sheet').clientHeight;
             const zoom = windowHeight / pageHeight;
             generated.style.transform = 'scale(' + zoom + ', ' + zoom + ')';
+            generated.style.transformOrigin = 'top';
         }
     }
 </script>
@@ -31,8 +33,12 @@
 <div bind:this={content} class="content">
     <slot>This is a slot component, you need to provide the content</slot>
 </div>
-<div bind:this={generated} class="generated {style}" class:landscape>
-    Loading...
+<div class="wrapper2">
+    <div class="wrapper" bind:this={wrapper}>
+        <div bind:this={generated} class="generated {style}" class:landscape>
+            Loading...
+        </div>
+    </div>
 </div>
 
 <style>
@@ -41,12 +47,16 @@
     }
 
     @media screen {
-        .generated {
-            margin: auto;
+        .wrapper2 {
+            display: table;
+            margin: 0 auto;
+        }
+        .wrapper {
+            display: block;
         }
 
-        :global(.sheet) {
-            margin: 0.2in auto;
+        .generated {
+            display: inline-block;
         }
     }
 
@@ -115,7 +125,7 @@
         :global(.sheet) {
             background: white;
             box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
-            margin: 5mm auto;
+            margin: 5mm;
         }
     }
 
