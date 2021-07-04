@@ -1,6 +1,6 @@
 {
   "name": "@pdfsvex/keyboard-navigation",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "src/index.js",
   "svelte": "src/index.js",
