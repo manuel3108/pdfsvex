@@ -1,5 +1,14 @@
 # @pdfsvex/website
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [[`27ce686`](https://github.com/manuel3108/pdfsvex/commit/27ce686fd4b24036ad666e010eea84bd73e260d2)]:
+  - @pdfsvex/pdfsvex@0.1.7
+  - @pdfsvex/dynamic-page-number@0.0.15
+  - @pdfsvex/table-of-contents@0.1.5
+
 ## 0.0.6
 
 ### Patch Changes

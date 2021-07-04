@@ -1,5 +1,11 @@
 # @pdfsvex/pdfsvex
 
+## 0.1.7
+
+### Patch Changes
+
+- [`27ce686`](https://github.com/manuel3108/pdfsvex/commit/27ce686fd4b24036ad666e010eea84bd73e260d2) Thanks [@manuel3108](https://github.com/manuel3108)! - fix presentation mode
+
 ## 0.1.6
 
 ### Patch Changes
